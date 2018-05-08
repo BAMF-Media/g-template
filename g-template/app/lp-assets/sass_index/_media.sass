@@ -1,0 +1,932 @@
+@import "vars"
+
+
+@media screen and (min-width: 1450px)
+  .cummunityFluid
+    // min-height: 700px
+    .communityList
+    .content
+      background-image: url("../img/communityCircles/zig_zag_bigDevice.svg")
+
+
+@media screen and (min-width: 1850px)
+  .cummunityFluid
+    // min-height: 700px
+    .communityList
+      margin-top: 150px
+
+
+/*==========  Desktop First  ==========*/
+
+//Large:  992px --- 1200
+
+
+
++media-breakpoint-down(lg)
+
+  .modalWrap
+    .modalContent
+      width: 75%
+  .headerWrap
+    z-index: 999
+    padding-top: 100px
+    .topContainer
+      .formWrap
+        form
+          .mainBtn
+            width: 100%
+            margin-left: 0
+            margin-top: 20px
+          .inputText
+            width: 100%
+
+
+    .headerInner
+      position: fixed
+      top: 0
+      right: 0
+      left: 0
+      z-index: 999
+      background: $accent
+      width: 100%
+      height: 80px
+      padding-right: 30px
+      padding-left: 30px
+      .leftHeader
+        .logo
+          img
+            width: 175px
+            height: auto
+          .logoBlack
+            display: none
+          .logoWhite
+            display: block
+
+      .rightHeader
+        nav
+          ul
+            padding: 0
+            li
+              margin-right: 0
+              margin-bottom: 30px
+              a
+                font-size: 20px
+                color: $white
+                border-bottom: 3px solid transparent
+                font-family: $muliSemiBold
+                &:hover
+                  border-bottom: 3px solid $white
+
+  .topContainer
+    .formWrap
+      form
+        .errorMessage
+          text-align: center
+
+
+    .companiesWrap
+      flex-direction: column
+      margin-top: 50px
+      .featuredOn
+        width: 100%
+        text-align: center
+        .desc
+          margin-bottom: 15px
+          font-size: 15px
+          &:after
+            display: none
+      .companiesInner
+        margin-top: 20px
+        width: 100%
+      .totalFundingWrap
+        margin-top: 40px
+
+  .hamburger
+    display: block
+    line-height: 1
+    padding: 0
+    &:hover
+      opacity: 1
+  .hamburger.is-active
+    z-index: 21
+  .hamburger-inner
+    &:after,&:before
+      background: $white
+  .hamburger--collapse
+    .hamburger-inner
+      background: $white
+
+  #nav
+    display: none
+    position: fixed
+    padding-top: 30px
+    width: 100%
+    height: 100%
+    background: $accent
+    top: 80px
+    right: 0
+    left: 0
+    z-index: 20
+    ul
+      flex-direction: column
+      justify-content: center
+      text-align: center
+  #nav.nav-active
+    display: block
+
+  .formWrap
+    margin-top: 30px
+
+
+  .discountFluid
+    .discountContainer
+      .moneyWrap
+        width: 100%
+        padding: 20px 5px
+        .amount
+          line-height: 1
+          margin-bottom: 7px
+
+  .videoFluid
+    padding-bottom: 45px
+    padding-top: 60px
+
+  .planFluid
+    .planContainer
+      .planList
+        .active
+          width: 300px
+        li
+          width: 240px
+
+
+  .animtatedSolutionFluid
+    .animtatedSolutionContainer
+
+
+
+  .ourSolutionsFluid
+    .ourSolutionsContainer
+      .description
+        padding-top: 0
+
+
+  .featuresFluid
+    .featuresContainer
+      .feature
+        margin-top: 20px
+        justify-content: flex-start
+
+  .roadMapFluid
+    .roadMapContainer
+      .roadMapWrap
+        margin: 90px 60px 0
+
+  .cummunityFluid
+    min-height: 550px
+    .person
+      .aboutPerson
+        width: 220px
+        left: -75px
+
+
+  .teamFluid
+    .teamContainer
+      .teammate
+        margin: 20px 0
+        width: 145px
+
+
+  .formFluid
+    .formContainer
+      top: -122px
+      .commonText
+        margin-bottom: 41px
+  .footerFluid
+    padding-top: 200px
+    margin-top: -175px
+    .footerContainer
+      .footerForm
+
+
+
+
+//Medium:  768px -- 992
++media-breakpoint-down(md)
+
+  .modalWrap
+    .modalContent
+      width: 80%
+      height: auto
+    .modalBody
+      padding: 37px
+
+  .headerWrap
+    &:after
+      display: none
+    .topContainer
+      margin-top: 50px
+      .whitePaperWrap
+        display: none
+      .whitePaperWrapMobile
+        display: block
+        img
+          margin: 0 auto
+          height: 400px
+
+
+      .formWrap
+        margin-top: 0px
+        form
+          justify-content: center
+          .inputText
+            width: 350px
+          .mainBtn
+            width: 350px
+            margin-left: -50px
+            margin-top: 0
+
+
+  .flip-clock-wrapper
+    ul
+      width: 53px
+
+
+
+  .videoFluid
+    padding-top: 20px
+    padding-bottom: 10px
+
+    .videoContainer
+      .videoWrap
+        .videoLary
+          iframe
+            max-width: 100%
+
+  .messageLarryFluid
+    padding-bottom: 0
+    .messageLarryContainer
+      .messageWrap
+        img
+          height: auto
+
+
+
+
+  .discountFluid
+    .discountContainer
+      .moneyWrap
+        padding: 12px 0
+        .amount
+          font-size: 29px
+        .moneyWrapInner
+          padding: 0
+
+      .progress
+
+        .breakPUp
+
+          &.firstT
+            left: 3%
+
+          &.secondT
+            left: 23%
+
+          &.thirdT
+            left: 83%
+
+        .breakPD
+          &.firstR
+            left: 3%
+
+          &.secondR
+            left: 23%
+  .planFluid
+    .planContainer
+      .planList
+        .active
+          width: 240px
+          .mainBtn
+            width: 97%
+            font-size: 14.5px
+        li
+          width: 200px
+
+  .animtatedSolutionFluid
+    .animtatedSolutionContainer
+
+
+  .solutionsFluid
+    .solutionsContainer
+      .mainBtn
+        width: 70%
+      .colItems
+        margin-bottom: 25px
+
+
+  .ourSolutionsFluid
+    .ourSolutionsContainer
+      .arguments
+        padding: 30px 30px 30px
+      .items
+      img
+        border-radius: 30px
+      .description
+        padding-bottom: 0
+
+  .roadMapFluid
+    .roadMapContainer
+      .roadMapWrap
+        margin: 90px 20px 0
+
+      .step
+        &.step1
+          &:after
+            right: -48px
+            border-top-right-radius: 53px
+            border-bottom-right-radius: 53px
+
+        &.step2
+          &:after
+            left: -48px
+            border-top-left-radius: 53px
+            border-bottom-left-radius: 53px
+
+      .point
+        margin: 25px 10px 60px
+
+  .calcFluid
+    .calcRow
+
+      .currentDis
+        width: 320px
+        p
+          span
+            margin-left: 0
+        button
+          margin-left: 0
+          .hideText
+            margin-left: 0
+
+
+      .graph
+        width: 60px
+
+        .level1
+          p
+            font-size: 12px
+
+      .value
+        font-size: 20px
+
+
+
+  .cummunityMobileFluid
+    display: none
+    padding-top: 40px
+    padding-bottom: 30px
+
+
+  .cummunityFluid
+    display: none
+
+  .advisorsFluid
+
+  .teamFluid
+    padding-top: 40px
+    padding-bottom: 40px
+    .teamContainer
+      .devider
+        display: none
+
+  .formFluid
+    .formContainer
+      margin-top: 32px
+      form
+        .updatesWrap
+          height: 42px
+
+      .h4
+        font-size: 27px
+        margin-bottom: 4px
+      .commonText
+        margin-top: 10px
+        margin-bottom: 20px
+      .formWrap
+        margin-top: 0
+
+  .footerFluid
+    margin-top: -130px
+    padding-top: 60px
+    background: -webkit-gradient(linear,left top,right top,from(#7ec242),to(#2bad4a))
+    background: -webkit-linear-gradient(left,#7ec242 0,#2bad4a 100%)
+    background: -o-linear-gradient(left,#7ec242 0,#2bad4a 100%)
+    background: linear-gradient(90deg,#7ec242 0,#2bad4a 100%)
+    .footerContainer
+
+      .findWrap
+        padding-right: 0
+      .logoWrap
+        img
+          margin-bottom: 30px
+
+  .landscapeWrap
+    display: none
+//Small:  576px --- 768px
++media-breakpoint-down(sm)
+
+
+  .modalWrap
+    padding-top: 100px
+    .modalContent
+      width: 75%
+    .logoBlack
+      width: 150px
+      margin-bottom: 20px
+
+    .h2
+      font-size: 19px
+    .launchT
+      font-size: 21px
+    .modalBody
+      background-size: cover
+      padding: 30px
+    form
+      .mainBtn
+        width: 100%
+        padding-right: 20px
+
+      .inputText
+        width: 100%
+
+    .closeModal
+      right: 13px
+      top: 13px
+      &:after, &:before
+        height: 5px
+        width: 35px
+
+  .h2
+    font-size: 35px
+    text-align: center
+  p
+    text-align: center
+
+  .headerWrap
+    padding-top: 60px
+    padding-bottom: 30px
+    background: $white
+    .h2
+      font-size: 39px
+    .topContainer
+
+      .formWrap
+        margin-top: 0
+        form
+          font-size: 16px
+          margin: 0 auto
+          .inputText
+            width: 270px
+          .mainBtn
+            width: 270px
+            margin-top: 0
+    .companiesWrap
+      margin-top: 40px
+      .featuredOn
+        .desc
+          margin-bottom: 0
+      .companiesInner
+        flex-wrap: wrap
+        justify-content: center
+        div
+          width: 150px
+          margin: 20px
+          img
+            margin: 0 auto
+
+    .formWrap
+      margin-top: 0px
+
+  .messageLarryFluid
+  .messageLarryContainer
+    .messageWrap
+      img
+        width: 300px
+  .discountFluid
+    .discountContainer
+
+      .progress
+        .breakP
+          display: none
+
+        .whiteLine
+          padding-left: 20px
+          font-size: 10px
+
+  .calcFluid
+    .calcRow
+      .currentDis
+        margin-bottom: 20px
+      .graphList
+        height: 450px
+        padding-left: 0
+
+
+
+
+  .solutionsFluid
+    padding-top: 45px
+
+
+  .ourSolutionsFluid
+    .ourSolutionsContainer
+      .learnMore
+        margin-bottom: 25px
+      .description.subsEn,
+      .description.benefits
+        padding-left: 20px
+      .arguments
+        padding: 12px 12px 30px
+
+      .items
+        margin-top: 40px
+      .solutionImg
+        margin-top: 0
+      .description.greenEn
+        margin-top: 15px
+
+  .aboutGearMessageFluid
+    .aboutGearMessageContainer
+      .h2
+        text-align: center
+      img
+        display: none
+      .mainBtn
+        margin: 25px auto 0 auto
+
+  .animtatedSolutionFluid
+    .animtatedSolutionContainer
+      .animateIcon
+        max-width: 140px
+
+  .solutionsFluid
+    .solutionsContainer
+      .mainBtn
+        width: 65%
+
+  .icoPriceFluid
+    .icoPriceContainer
+      .h2
+        text-align: center
+        padding-left: 0
+      .smallDesc
+        padding-left: 0
+      .mainBtn
+        margin: 5px auto 30px auto
+      .innerWrap
+        padding-left: 0
+  .energyFluid
+    padding-bottom: 0
+    .energyContainer
+      .desc
+        margin-bottom: 30px
+
+  .roadMapFluid
+    padding-bottom: 0
+    .roadMapContainer
+
+      .logo
+        top: -40px
+        left: -26px
+      .roadMapWrap
+        margin-top: 55px
+        border-left: 4px solid $accent
+        
+
+      .step
+        flex-direction: column
+        border-top: none
+
+        &.step1
+          &:after
+            display: none
+
+        &.step2
+          flex-direction: column-reverse
+          &:after
+            display: none
+
+      .point
+        margin: 20px 30px 
+        width: 100%
+
+        &:before
+          border-bottom-color: transparent
+          border-right-color: $accent
+          top: 25px
+          left: -20px
+
+      .marker
+        top: 25px
+        left: -42px
+
+      .date
+        top: 25px
+        left: -95px
+        transform: rotate(270deg)
+  .icoPriceFluid
+    padding-top: 40px
+    padding-bottom: 40px
+
+  .teamFluid
+    padding-bottom: 30px
+
+  .advisorsFluid
+    padding-top: 40px
+    .advisorsContainer
+
+  .videoFluid
+    padding-top: 0
+    padding-bottom: 0
+    .videoContainer
+      .videoWrap
+        .videoLary
+          iframe
+            height: 320px !important
+
+
+  .featuresFluid
+    padding-bottom: 30px
+    padding-top: 25px
+    .featuresContainer
+      .featureName
+        margin-top: 0
+      .featureAnim
+        max-width: 170px
+  .formFluid
+    .formContainer
+      margin-bottom: 30px
+      margin-top: 100px
+      background: -webkit-gradient(linear,left top,right top,from(#7ec242),to(#2bad4a))
+      background: -webkit-linear-gradient(left,#7ec242 0,#2bad4a 100%)
+      background: -o-linear-gradient(left,#7ec242 0,#2bad4a 100%)
+      background: -webkit-gradient(linear,left top,right top,color-stop(0,#7ec242),to(#2bad4a))
+      background: linear-gradient(90deg,#7ec242 0,#2bad4a 100%)
+      border-radius: 30px
+      padding-top: 20px
+      padding-bottom: 15px
+    form
+      .updatesWrap
+        height: 42px
+
+      .h4
+        margin-bottom: 15px
+      .commonText
+        margin-top: 15px
+
+  .footerFluid
+    padding-top: 40px
+    .footerContainer
+      .footerRow
+        padding-bottom: 0
+      .connectWrap
+        display: flex
+        flex-direction: column
+        margin-top: 12px
+        margin-bottom: 20px
+      .stay
+        margin-top: 20px
+      .stay,
+      .subsc
+        text-align: center
+      .logoWrap
+        img
+          margin-bottom: 40px
+      .socialLinks
+        margin-bottom: 0
+        justify-content: space-around
+      .footerForm
+
+        .footerEmal
+          height: 42px
+
+        .footerSubmit
+          font-size: 34px
+          margin-left: -39px
+
+
+
+//Extra small: 0 --- 576px
+
++media-breakpoint-down(xs)
+
+  .h2
+    font-size: 25px
+
+  .modalWrap
+    .logoBlack
+      width: 120px
+
+  .modalWrap
+    .modalBody
+      padding: 25px
+    .closeModal
+      right: 6px
+      top: 10px
+      &:after, &:before
+        height: 5px
+        width: 34px
+
+
+    .h2
+      font-size: 16px
+    .launchT
+      margin-bottom: 15px
+    form
+      margin-top: 15px
+      .inputText
+        height: 38px
+        font-size: 13px
+        margin-bottom: 10px
+      .mainBtn
+        height: 38px
+        font-size: 13px
+        span
+          top: 9px
+
+
+
+  .headerWrap
+    padding-bottom: 30px
+    .headerInner
+      .leftHeader
+        .logo
+          img
+            width: 150px
+    .companiesWrap
+      padding-top: 0px
+      .featuredOn
+        .desc
+          font-size: 16px
+      .totalFundingWrap
+        .total
+          font-size: 15px
+          margin-top: 8px
+          margin-bottom: 8px
+          &:after
+            display: none
+        .amount
+          margin-bottom: 8px
+          font-size: 21px
+          margin-top: 4px
+        .totalFunding
+          width: 77%
+          flex-direction: column
+          padding-top: 10px
+          padding-bottom: 4px
+          margin: 0 auto
+    .topContainer
+
+      .whitePaperWrapMobile
+        img
+          height: auto
+
+      .h2
+        font-size: 27px
+        margin-bottom: 11px
+      .subtitle
+        font-size: 18px
+        margin-bottom: 0
+      .formWrap
+        margin-top: -30px
+        form
+          flex-direction: column
+          width: 90%
+          .inputText
+            width: 100%
+            margin-top: 10px
+          .mainBtn
+            width: 100%
+            margin-top: 10px
+            margin-left: 0
+
+
+
+  .animtatedSolutionFluid
+    .animtatedSolutionContainer
+
+  .icoPriceFluid
+    padding-top: 40px
+    padding-bottom: 40px
+    .icoPriceContainer
+      .h2
+        font-size: 25px
+      .graphWrapper
+        padding: 0
+
+
+  .videoFluid
+    padding-top: 0px
+    padding-bottom: 0px
+    .videoContainer
+      .videoWrap
+        .videoLary
+          iframe
+            height: 250px !important
+
+  .calcFluid
+    .calcRow
+
+      .calc
+        padding-left: 0
+      .currentDis
+        width: 100%
+
+      .invest
+        span
+          font-size: 36px
+
+    .totalRow
+      .amount
+        font-size: 50px
+
+      .commonText
+        text-align: center
+
+  .advisorsFluid
+    .advisorsContainer
+      .advisor
+        justify-content: center
+        margin-top: 0
+        img
+          height: 250px
+          margin: 20px auto
+    .name
+      margin-bottom: 0
+
+
+
+  .formFluid
+
+    .formContainer
+      background: $white
+      margin-top: 0
+      margin-bottom: 0
+      padding-top: 0
+      padding-bottom: 40px
+      position: static
+      .formWrap
+        background: -webkit-gradient(linear,left top,right top,from(#7ec242),to(#2bad4a))
+        background: -webkit-linear-gradient(left,#7ec242 0,#2bad4a 100%)
+        background: -o-linear-gradient(left,#7ec242 0,#2bad4a 100%)
+        background: -webkit-gradient(linear,left top,right top,color-stop(0,#7ec242),to(#2bad4a))
+        background: linear-gradient(90deg,#7ec242 0,#2bad4a 100%)
+        border-radius: 30px
+        padding: 20px 10px
+      form
+        .updatesWrap
+          height: auto
+          flex-direction: column
+          background: transparent
+        label
+          display: none
+        .updatesEmail
+          width: 100%
+          border-radius: 30px
+          border-left: 0px
+          padding-left: 20px
+          height: 50px
+          margin-bottom: 10px
+
+        .updatesSubmit
+          height: 50px
+          width: 100%
+      .h4
+        font-size: 23px
+        margin-bottom: 20px
+
+  .footerFluid
+    margin-top: 0
+    .footerContainer
+      .findWrap
+        padding-left: 0
+        li
+          padding-left: 30px
+          &:before
+            left: 16px
+      .connectWrap
+        margin-top: 0
+      .stay
+        margin-top: 0
+
+
+
+// iframe video
+@media screen and (max-width: 480px)
+  .videoFluid
+    .videoContainer
+      .videoWrap
+        .videoLary
+          iframe
+            height: 180px !important
+            border-radius: 0px

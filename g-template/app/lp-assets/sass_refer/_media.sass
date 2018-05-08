@@ -1,0 +1,175 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+
+//Extra large: ≥1200px
++media-breakpoint-down(xl)
+
+
+//Large: ≥992px
+
++media-breakpoint-down(lg)
+  .headerWrap
+    padding-top: 100px
+    .headerInner
+      position: fixed
+      top: 0
+      right: 0
+      left: 0
+      z-index: 99
+      background: $accent
+      width: 100%
+      height: 80px
+      padding-right: 30px
+      padding-left: 30px
+      .leftHeader
+        .logo
+          img
+            width: 175px
+          .logoBlack
+            display: none
+          .logoWhite
+            display: block
+
+
+    .topContainer
+      .whitePaperWrap
+        img
+          height: auto
+          margin: auto
+      
+
+      
+    
+s
+  .hamburger
+    display: block
+  .hamburger.is-active
+    z-index: 21
+    position: fixed
+    right: 30px
+    top: 10px
+  
+
+
+
+
+//Medium: ≥768px
++media-breakpoint-down(md)
+
+  .headerWrap
+    padding-top: 40px
+    &:after
+      display: none
+    .topContainer
+      margin-top: 50px
+      .whitePaperWrap
+        img
+          margin: 0 auto 40px auto
+
+
+
+
+
+
+
+
+//Small: ≥576px
++media-breakpoint-down(sm)
+
+  .docWrap
+    order: 2
+  .whitePaperWrap
+    order: 1
+
+  .headerWrap
+    padding-top: 60px
+    background: $white
+    .topContainer
+      .h2 
+        margin-top: 0
+        text-align: center
+
+      .whitePaperWrap
+        img
+          margin: 0 auto 
+
+      .mainBtn
+        margin: 30px auto 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Extra small: >0
++media-breakpoint-down(xs)
+
+  .headerWrap
+    padding-bottom: 40px
+    .headerInner
+      .leftHeader
+        .logo
+          img
+            width: 150px
+    .companiesWrap
+      padding-top: 0px
+
+
+    .topContainer
+      .whitePaperWrap
+        img
+          height: auto
+
+      .h2
+        font-size: 31px
+        margin-bottom: 11px
+      .subtitle
+        font-size: 22px
+        margin-bottom: 0
+
+      .mainBtn
+        width: 250px
+
+
+
+  .referralFluid
+    .referralContainer
+      .telegramWrap
+        padding: 10px 20px 20px
+        border-radius: 10px
+
+        .logo
+          display: none
+
+        .mainBtn
+          height: 40px
+          // &:before
+          //   content: '\f3fe'
+          //   font-family: "Font Awesome 5 Free"
+          //   margin-right: 5px
+
+      .privacyWrap
+
+        .fLinks
+          font-size: 20px
+
+        .separator
+          font-size: 20px
+          margin: 0 10px 10px
+
+
+

@@ -1,0 +1,392 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+  color: #dce2e8
+  font-family: $muliSemiBold
+
+::selection
+  background-color: $accent
+  color: #fff
+
+html, body
+  height: 100%
+
+body
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: 1.65
+  font-family: $default-font
+  overflow-x: hidden
+  color: $black
+  input, textarea
+    border: #666 1px solid
+    outline: none
+    &:focus:required:invalid
+      border-color: red
+    &:required:valid
+      border-color: green
+
+.loader
+  position: fixed
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  z-index: 9999
+  background: #ffffff
+  display: flex
+  align-content: center
+  justify-content: center
+  flex-direction: column
+  svg
+    margin-top: -10px
+    height: 400px !important
+    width: auto
+
+.loaderTExt
+  color: #343741
+  font-size: 40px
+  text-align: center
+  font-family: $muliBold
+
+.img-responsive
+  display: block
+  max-width: 100%
+  height: auto
+
+.text-center
+  text-align: center
+
+ul
+  li
+    list-style: none
+
+a:hover
+  text-decoration: none
+
+.h2
+  font-family: $futuraBold
+  font-size: 42px
+  line-height: 1.3em
+  text-transform: uppercase
+
+.h3
+  font-family: $muliSemiBold
+  text-transform: uppercase
+  font-size: 37px
+  text-align: center
+  span
+    font-family: $muliRegular
+    font-weight: 100
+  &.hr
+    border-bottom: 1px solid $darkGrey
+    position: relative
+    &:after
+      content: ''
+      width: 215px
+      height: 4px
+      background: $accent
+      position: absolute
+      bottom: -2px
+      left: 0
+      border-radius: 2px
+
+.h4
+  font-size: 41px
+  font-family: $muliLight
+
+.h5
+  text-align: center
+  font-size: 34px
+
+.subtitle
+  color: $lightGrey
+  font-size: 25px
+
+.smallTitle
+  font-family: $avenirBlack
+  text-transform: uppercase
+  font-size: 15px
+
+.boldT
+  font-family: $muliBold
+
+.semiB
+  font-family: $muliSemiBold
+
+.lightT
+  font-family: $muliLight
+
+// top form validation start
+
+.hiddenBlock
+  display: none
+
+.notValidEmailHeader
+  text-align: center
+  color: rgb(247, 29, 29)
+  margin-top: 20px
+  font-family: $muliBold
+  font-size: 15px
+  text-transform: uppercase
+
+// top form validation end
+
+.hamburger
+  display: none
+  &:active, &:focus
+    outline: none
+
+.shadowBtnGrey
+  box-shadow: 0 0 24px 5px rgba(203, 204, 208, .47)
+
+.gradientBtnGreen
+  background: #4daf3f
+  background: -moz-linear-gradient(left, #4daf3f 0%, #6ac657 47%, #89d573 100%)
+  background: -webkit-linear-gradient(left, #4daf3f 0%, #6ac657 47%, #89d573 100%)
+  background: linear-gradient(to right, #4daf3f 0%, #6ac657 47%, #89d573 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4daf3f', endColorstr='#89d573', GradientType=1)
+
+.hvr-grow-shadowGrey
+  transition: 0.5s
+  display: inline-block
+  box-shadow: 0 10px 10px -6px rgba(0, 0, 0, 0.25)
+
+.hvr-grow-shadowGrey:hover, .hvr-grow-shadowGrey:focus, .hvr-grow-shadowGrey:active
+  box-shadow: 0 10px 10px -6px rgba(0, 0, 0, 0.25)
+  transform: scale(1.05)
+
+.hvr-grow-shadowGreen
+  transition: 0.5s
+  display: inline-block
+  box-shadow: 0 6px 25px 15px rgba(103, 195, 84, 0.28)
+
+.hvr-grow-shadowGreen:hover, .hvr-grow-shadowGreen:focus, .hvr-grow-shadowGreen:active
+  box-shadow: 0 6px 25px 15px rgba(103, 195, 84, 0.28)
+  transform: scale(1.1)
+  transition: 0.5s
+
+// new shadow
+.greyShadow
+  box-shadow: 0 0 24px 11px rgba(110, 185, 95, 0.44) !important
+
+.greyShadowHover
+  transition: 0.3s
+  &:hover
+    cursor: pointer
+    box-shadow: 0px 0px 24px 11px rgba($accent, 0.6) !important
+
+.mainBtn
+  background: $accent
+  font-family: $futuraBold
+  border: none
+  border-radius: 30px
+  text-transform: uppercase
+  color: $white
+  display: flex
+  align-items: center
+  justify-content: center
+  padding-top: 0
+  padding-bottom: 0
+  height: 50px
+  position: relative
+  span
+    position: absolute
+    top: 12px
+    right: 0
+    left: 0
+    text-align: center
+
+  &:hover
+    color: $white
+    outline: none
+  &:focus, &:active
+    outline: none
+
+
+
+
+
+
+//////////////////////////
+
+
+.mainFluid
+  min-height: 100vh
+  .mainContainer
+    .mainWrap
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+     
+
+    .logo 
+      display: flex
+      align-items: center
+      justify-content: center
+      margin: 20px
+
+
+    .logoImg
+      height: 100%
+      
+
+
+
+    .logoText
+      font-family: $montserratLight
+      font-size: 50px
+      color: $lightGrey
+      text-transform: uppercase
+      margin-bottom: 0
+      margin-left: 5px
+    .h2
+      text-align: center
+      margin-bottom: 20px
+
+    .mainBtn
+      width: 250px
+      margin: 10px
+
+
+
+// Pop up start
+/* The Modal (background) */
+.modalWrap
+  display: none
+  position: fixed
+  z-index: 999
+  padding-top: 100px
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  overflow: auto
+  background-color: rgb(0, 0, 0)
+  background-color: rgba(0, 0, 0, 0.4)
+
+  .modalContent
+    position: relative
+    background: $white
+    border-radius: 50%
+    background-size: contain
+    margin: auto
+    padding: 0
+    width: 472px
+    box-shadow: 0 0 24px 11px rgba(110, 185, 95, 0.2)
+    -webkit-animation-name: animatetop
+    -webkit-animation-duration: 0.4s
+    animation-name: animatetop
+    animation-duration: 0.4s
+  .closeModal
+    color: white
+    font-size: 28px
+    font-weight: bold
+    position: absolute
+    right: 0
+    top: 0
+    width: 40px
+    height: 40px
+    border-radius: 50%
+    font-family: $futuraBold
+    display: flex
+    align-items: center
+    justify-content: center
+
+    &:before, &:after
+      $width: 50px
+      $height: 10px
+      transform: rotate(-45deg)
+      content: ''
+      position: absolute
+      top: 50%
+      left: 50%
+      margin-top: -$height/2
+      margin-left: -$width/2
+      display: block
+      height: $height
+      width: $width
+      background-color: #fff
+      transition: all 0.2s ease-out
+      border-radius: 40px
+    &:after
+      transform: rotate(45deg)
+
+  .closeModal:hover,
+  .closeModal:focus
+    color: #000
+    text-decoration: none
+    cursor: pointer
+
+  .modalBody
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    background-color: $white
+    background: url(../img/popUp/popUpIndex.svg) no-repeat top center
+    height: 473px
+    text-align: center
+    border-radius: 50%
+
+  .h2
+    font-size: 25px
+  .leave
+    font-size: 30px
+    margin-top: 15px
+    margin-bottom: 15px
+  form
+    font-size: 16px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    .inputText
+      height: 50px
+      width: 350px
+      display: flex
+      padding-left: 20px
+      align-items: center
+      padding-right: 55px
+      border: none
+      border-radius: 30px
+      color: #b8b9be
+      font-family: $muliSemiBold
+      background: #f2f2f2
+      margin-bottom: 20px
+      &::-webkit-input-placeholder
+        text-indent: 0px
+        transition: text-indent 1s ease
+        color: #b8b9be
+      &:focus::-webkit-input-placeholder
+        text-indent: 1000px
+        transition: text-indent 1s ease
+    .mainBtn
+      height: 50px
+      width: 350px
+      font-family: $futuraBold
+
+@-webkit-keyframes animatetop
+  from
+    top: -300px
+    opacity: 0
+  to
+    top: 0
+    opacity: 1
+
+@keyframes animatetop
+  from
+    top: -300px
+    opacity: 0
+  to
+    top: 0
+    opacity: 1
+
+// Pop up end
+
+@import "media"
+// Always at the end

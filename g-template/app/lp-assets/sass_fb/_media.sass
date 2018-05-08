@@ -1,0 +1,405 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+//Large:  992px --- 1200
+
+
+
++media-breakpoint-down(lg)
+
+  .headerWrap
+    z-index: 999
+    padding-top: 100px
+
+    .headerInner
+      position: fixed
+      top: 0
+      right: 0
+      left: 0
+      z-index: 999
+      background: $accent
+      width: 100%
+      height: 80px
+      padding-right: 30px
+      padding-left: 30px
+      .leftHeader
+        .logo
+          img
+            width: 175px
+          .logoBlack
+            display: none
+          .logoWhite
+            display: block
+
+      .rightHeader
+        nav
+          ul
+            padding: 0
+            li
+              margin-right: 0
+              margin-bottom: 30px
+              a
+                font-size: 20px
+                color: $white
+                border-bottom: 4px solid transparent
+                font-family: $muliSemiBold
+                &:hover
+                  border-bottom: 4px solid $white
+              &:last-child
+                a
+                  &:last-child
+                    color: $black
+                    &:hover
+                      border-bottom: 0
+
+    .companiesWrap
+      flex-direction: column
+      margin-top: 50px
+      .featuredOn
+        width: 100%
+        text-align: center
+        .desc
+          margin-bottom: 15px
+          font-size: 14px
+          &:after
+            display: none
+      .companiesInner
+        margin-top: 20px
+        width: 100%
+      .totalFundingWrap
+        margin-top: 40px
+
+  .hamburger
+    display: block
+    line-height: 1
+    padding: 0
+    &:hover
+      opacity: 1
+  .hamburger.is-active
+    z-index: 21
+  .hamburger-inner
+    &:after, &:before
+      background: $white
+  .hamburger--collapse
+    .hamburger-inner
+      background: $white
+
+  #nav
+    display: none
+    position: fixed
+    padding-top: 30px
+    width: 100%
+    height: 100%
+    background: $accent
+    top: 80px
+    right: 0
+    left: 0
+    z-index: 20
+    ul
+      flex-direction: column
+      justify-content: center
+      text-align: center
+  #nav.nav-active
+    display: block
+
+  .formWrap
+    margin-top: 30px
+
+  .videoFluid
+    padding-bottom: 45px
+    padding-top: 60px
+  .newsFluid
+    padding-bottom: 190px
+
+  .footerFluid
+    margin-top: -175px
+
+//Medium:  768px -- 992
++media-breakpoint-down(md)
+
+  .headerWrap
+    &:after
+      display: none
+    .topContainer
+      margin-top: 50px
+      .mainBtn
+        margin: 0 auto
+      .whitePaperWrap
+        display: none
+      .whitePaperWrapMobile
+        display: block
+        img
+          margin: 0 auto
+          height: 400px
+
+      .formWrap
+        margin-top: 0px
+        form
+          justify-content: center
+
+  .flip-clock-wrapper
+    ul
+      width: 53px
+
+  .videoFluid
+    padding-top: 20px
+    padding-bottom: 10px
+
+    .videoContainer
+      .videoWrap
+        .videoLary
+          iframe
+            max-width: 100%
+  .newsFluid
+    padding-bottom: 150px
+    .newsContainer
+      .h2
+        font-size: 26px
+      .itemNews
+        height: 300px
+
+  .footerFluid
+    margin-top: -130px
+    padding-top: 60px
+    background: -webkit-gradient(linear, left top, right top, from(#7ec242), to(#2bad4a))
+    background: -webkit-linear-gradient(left, #7ec242 0, #2bad4a 100%)
+    background: -o-linear-gradient(left, #7ec242 0, #2bad4a 100%)
+    background: linear-gradient(90deg, #7ec242 0, #2bad4a 100%)
+    .footerContainer
+
+      .findWrap
+        padding-right: 0
+      .logoWrap
+        img
+          margin-bottom: 30px
+
+  .landscapeWrap
+    display: none
+//Small:  576px --- 768px
++media-breakpoint-down(sm)
+
+  .modalWrap
+    .modalContent
+      width: 300px
+
+    .h2
+      font-size: 16px
+
+    .leave
+      font-size: 22px
+      margin-bottom: 10px
+      margin-top: 0
+    .modalBody
+      background-size: cover
+      height: 300px
+
+    form
+      .mainBtn
+        width: 220px
+        padding-right: 20px
+
+      .inputText
+        width: 280px
+
+  .h2
+    font-size: 35px
+    text-align: center
+  p
+    text-align: center
+
+  .headerWrap
+    padding-top: 60px
+    padding-bottom: 30px
+    background: $white
+    .h2
+      font-size: 39px
+    .topContainer
+
+      .formWrap
+        margin-top: 0
+        form
+          font-size: 16px
+          margin: 0 auto
+          .inputText
+            width: 100%
+          .mainBtn
+            width: 100%
+    .companiesWrap
+      margin-top: 40px
+      .featuredOn
+        .desc
+          margin-bottom: 0
+      .companiesInner
+        flex-wrap: wrap
+        justify-content: center
+        div
+          width: 150px
+          margin: 20px
+          img
+            margin: 0 auto
+
+    .formWrap
+      margin-top: 0px
+
+      .progress
+        .breakP
+          display: none
+
+        .whiteLine
+          padding-left: 20px
+          font-size: 10px
+
+  .videoFluid
+    padding-top: 0
+    padding-bottom: 0
+    .videoContainer
+      .videoWrap
+        .videoLary
+          iframe
+            height: 320px !important
+
+  .newsFluid
+    padding-top: 25px
+    .newsContainer
+      .h2
+        font-size: 25px
+      .itemNews
+        align-items: center
+        justify-content: center
+        padding: 25px
+        height: 270px
+        margin-bottom: 30px
+
+  .footerFluid
+    padding-top: 40px
+    .footerContainer
+      .connectWrap
+        display: flex
+        flex-direction: column
+        margin-top: 12px
+        margin-bottom: 20px
+      .stay
+        margin-top: 20px
+      .stay,
+      .subsc
+        text-align: center
+      .logoWrap
+        img
+          margin-bottom: 40px
+      .socialLinks
+        margin-bottom: 0
+        justify-content: space-around
+      .footerForm
+        .footerEmal
+          height: 42px
+
+        .footerSubmit
+          font-size: 34px
+          margin-left: -39px
+
+//Extra small: 0 --- 576px
+
++media-breakpoint-down(xs)
+
+  .h2
+    font-size: 25px
+
+  .headerWrap
+    padding-bottom: 30px
+    .headerInner
+      .leftHeader
+        .logo
+          img
+            width: 150px
+    .companiesWrap
+      padding-top: 0px
+      .featuredOn
+        .desc
+          font-size: 16px
+      .totalFundingWrap
+        .total
+          font-size: 15px
+          margin-top: 8px
+          margin-bottom: 8px
+          &:after
+            display: none
+        .amount
+          margin-bottom: 8px
+          font-size: 21px
+          margin-top: 4px
+        .totalFunding
+          width: 77%
+          flex-direction: column
+          padding-top: 10px
+          padding-bottom: 4px
+          margin: 0 auto
+    .topContainer
+      .mainBtn
+        width: 85%
+
+      .whitePaperWrapMobile
+        img
+          height: auto
+
+      .h2
+        font-size: 27px
+        margin-bottom: 11px
+      .subtitle
+        font-size: 18px
+        margin-bottom: 0
+      .formWrap
+        margin-top: -30px
+        form
+          flex-direction: column
+          width: 90%
+          .inputText
+            width: 100%
+            margin-top: 10px
+          .mainBtn
+            width: 100%
+            margin-top: 10px
+            margin-left: 0
+
+  .videoFluid
+    padding-top: 0px
+    padding-bottom: 0px
+    .videoContainer
+      .videoWrap
+        .videoLary
+          iframe
+            height: 250px !important
+
+
+  .newsFluid
+    padding-bottom: 20px
+    .newsContainer
+      .h2
+        font-size: 20px
+        line-height: 1.5em
+      .itemNews
+        height: 240px
+
+  .footerFluid
+    margin-top: 0
+    .footerContainer
+      .findWrap
+        padding-left: 0
+        li
+          padding-left: 30px
+          &:before
+            left: 16px
+      .connectWrap
+        margin-top: 0
+      .stay
+        margin-top: 0
+
+// iframe video
+@media screen and (max-width: 480px)
+  .videoFluid
+    .videoContainer
+      .videoWrap
+        .videoLary
+          iframe
+            height: 180px !important
+            border-radius: 0px

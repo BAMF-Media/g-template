@@ -1,0 +1,175 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+//Large:  992px --- 1200
+
+
+
++media-breakpoint-down(lg)
+
+
+//Medium:  768px -- 992
++media-breakpoint-down(md)
+
+  .mainFluid
+    .mainContainer
+      .subtitle
+        font-size: 20px
+
+//Small:  576px --- 768px
++media-breakpoint-down(sm)
+
+  .modalWrap
+    .modalContent
+      width: 300px
+
+    .h2
+      font-size: 16px
+
+  
+
+    .leave
+      font-size: 22px
+      margin-bottom: 10px
+      margin-top: 0
+    .modalBody
+      background-size: cover
+      height: 300px
+
+    form
+      .mainBtn
+        width: 220px
+        padding-right: 20px
+
+      .inputText
+        width: 280px
+
+  .h2
+    font-size: 35px
+    text-align: center
+  p
+    text-align: center
+
+
+        
+
+  .mainFluid
+    .mainContainer
+
+      .mainBtn
+        mainBtn
+        margin: 20px 0
+
+      .logoImg
+        width: 50px
+
+      .logoText
+        font-size: 35px
+
+
+//Extra small: 0 --- 576px
+
++media-breakpoint-down(xs)
+
+  .h2
+    font-size: 25px
+
+  .headerWrap
+    padding-bottom: 30px
+    .headerInner
+      .leftHeader
+        .logo
+          img
+            width: 150px
+    .companiesWrap
+      padding-top: 0px
+      .featuredOn
+        .desc
+          font-size: 16px
+      .totalFundingWrap
+        .total
+          font-size: 15px
+          margin-top: 8px
+          margin-bottom: 8px
+          &:after
+            display: none
+        .amount
+          margin-bottom: 8px
+          font-size: 21px
+          margin-top: 4px
+        .totalFunding
+          width: 77%
+          flex-direction: column
+          padding-top: 10px
+          padding-bottom: 4px
+          margin: 0 auto
+    .topContainer
+      .mainBtn
+        width: 85%
+
+      .whitePaperWrapMobile
+        img
+          height: auto
+
+      .h2
+        font-size: 27px
+        margin-bottom: 11px
+      .subtitle
+        font-size: 18px
+        margin-bottom: 0
+      .formWrap
+        margin-top: -30px
+        form
+          flex-direction: column
+          width: 90%
+          .inputText
+            width: 100%
+            margin-top: 10px
+          .mainBtn
+            width: 100%
+            margin-top: 10px
+            margin-left: 0
+
+  .videoFluid
+    padding-top: 0px
+    padding-bottom: 0px
+    .videoContainer
+      .videoWrap
+        .videoLary
+          iframe
+            height: 250px !important
+
+
+  .newsFluid
+    padding-bottom: 20px
+    .newsContainer
+      .h2
+        font-size: 20px
+        line-height: 1.5em
+      .itemNews
+        height: 240px
+
+  .footerFluid
+    margin-top: 0
+    .footerContainer
+      .findWrap
+        padding-left: 0
+        li
+          padding-left: 30px
+          &:before
+            left: 16px
+      .connectWrap
+        margin-top: 0
+      .stay
+        margin-top: 0
+
+// iframe video
+@media screen and (max-width: 480px)
+  .videoFluid
+    .videoContainer
+      .videoWrap
+        .videoLary
+          iframe
+            height: 180px !important
+            border-radius: 0px

@@ -1,0 +1,880 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+  color: #dce2e8
+  font-family: $muliSemiBold
+
+::selection
+  background-color: $accent
+  color: #fff
+
+html, body
+  height: 100%
+
+body
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: 1.65
+  font-family: $default-font
+  overflow-x: hidden
+  color: $black
+  input, textarea
+    border: #666 1px solid
+    outline: none
+    &:focus:required:invalid
+      border-color: red
+    &:required:valid
+      border-color: green
+
+.loader
+  position: fixed
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  z-index: 9999
+  background: #ffffff
+  display: flex
+  align-content: center
+  justify-content: center
+  flex-direction: column
+  svg
+    margin-top: -10px
+    height: 400px !important
+    width: auto
+
+.loaderTExt
+  color: #343741
+  font-size: 40px
+  text-align: center
+  font-family: $muliBold
+
+.img-responsive
+  display: block
+  max-width: 100%
+  height: auto
+
+.text-center
+  text-align: center
+
+ul
+  li
+    list-style: none
+
+a:hover
+  text-decoration: none
+
+.h2
+  font-family: $futuraBold
+  font-size: 42px
+  line-height: 1.3em
+  text-transform: uppercase
+
+.h3
+  font-family: $muliSemiBold
+  text-transform: uppercase
+  font-size: 37px
+  text-align: center
+  span
+    font-family: $muliRegular
+    font-weight: 100
+  &.hr
+    border-bottom: 1px solid $darkGrey
+    position: relative
+    &:after
+      content: ''
+      width: 215px
+      height: 4px
+      background: $accent
+      position: absolute
+      bottom: -2px
+      left: 0
+      border-radius: 2px
+
+.h4
+  font-size: 41px
+  font-family: $muliLight
+
+.h5
+  text-align: center
+  font-size: 34px
+
+.subtitle
+  color: $lightGrey
+  font-size: 25px
+
+.smallTitle
+  font-family: $avenirBlack
+  text-transform: uppercase
+  font-size: 15px
+
+.boldT
+  font-family: $muliBold
+
+.semiB
+  font-family: $muliSemiBold
+
+.lightT
+  font-family: $muliLight
+
+// top form validation start
+
+.hiddenBlock
+  display: none
+
+.notValidEmailHeader
+  text-align: center
+  color: rgb(247, 29, 29)
+  margin-top: 20px
+  font-family: $muliBold
+  font-size: 15px
+  text-transform: uppercase
+
+// top form validation end
+
+.hamburger
+  display: none
+  &:active, &:focus
+    outline: none
+
+.shadowBtnGrey
+  box-shadow: 0 0 24px 5px rgba(203, 204, 208, .47)
+
+.gradientBtnGreen
+  background: #4daf3f
+  background: -moz-linear-gradient(left, #4daf3f 0%, #6ac657 47%, #89d573 100%)
+  background: -webkit-linear-gradient(left, #4daf3f 0%, #6ac657 47%, #89d573 100%)
+  background: linear-gradient(to right, #4daf3f 0%, #6ac657 47%, #89d573 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4daf3f', endColorstr='#89d573', GradientType=1)
+
+.hvr-grow-shadowGrey
+  transition: 0.5s
+  display: inline-block
+  box-shadow: 0 10px 10px -6px rgba(0, 0, 0, 0.25)
+
+.hvr-grow-shadowGrey:hover, .hvr-grow-shadowGrey:focus, .hvr-grow-shadowGrey:active
+  box-shadow: 0 10px 10px -6px rgba(0, 0, 0, 0.25)
+  transform: scale(1.05)
+
+.hvr-grow-shadowGreen
+  transition: 0.5s
+  display: inline-block
+  box-shadow: 0 6px 25px 15px rgba(103, 195, 84, 0.28)
+
+.hvr-grow-shadowGreen:hover, .hvr-grow-shadowGreen:focus, .hvr-grow-shadowGreen:active
+  box-shadow: 0 6px 25px 15px rgba(103, 195, 84, 0.28)
+  transform: scale(1.1)
+  transition: 0.5s
+
+// new shadow
+.greyShadow
+  box-shadow: 0 0 24px 11px rgba(110, 185, 95, 0.44) !important
+
+.greyShadowHover
+  transition: 0.3s
+  &:hover
+    cursor: pointer
+    box-shadow: 0px 0px 24px 11px rgba($accent, 0.6) !important
+
+.mainBtn
+  background: $accent
+  font-family: $futuraBold
+  border: none
+  border-radius: 30px
+  text-transform: uppercase
+  color: $white
+  display: flex
+  align-items: center
+  justify-content: center
+  padding-top: 0
+  padding-bottom: 0
+  height: 50px
+  position: relative
+  span
+    position: absolute
+    top: 12px
+    right: 0
+    left: 0
+    text-align: center
+
+  &:hover
+    color: $white
+    outline: none
+  &:focus, &:active
+    outline: none
+
+.headerWrap
+  //background: url(../img/header/leaf2.svg) no-repeat top right
+  //background-size: contain
+  //padding-bottom: 40px
+  background-size: 50%
+  min-height: 700px
+  background-position: 100% 97px
+  position: relative
+  z-index: 1
+
+  &:after
+    content: ''
+    width: 100%
+    height: 105%
+    position: absolute
+    background: url(../img/header/leaf2.svg) no-repeat top right
+    -webkit-background-size: 44% 44%
+    background-size: 687px
+    background-position: 100% 40%
+    top: 85px
+    display: block
+    z-index: -1
+  .headerInner
+    width: 90%
+    margin: 0 auto
+    height: 124px
+    display: flex
+    align-content: center
+    justify-content: space-between
+    .leftHeader
+      align-self: center
+      .logo
+        img
+          width: 200px
+          height: auto
+        .logoWhite
+          display: none
+
+    .rightHeader
+      align-self: center
+      nav
+        ul
+          display: flex
+          align-items: center
+          margin-bottom: 0
+          li
+            margin-right: 20px
+            a
+              color: $black
+              font-size: 13px
+              text-transform: uppercase
+              font-family: $muliRegular
+              display: block
+              transition: 0.5s
+              border-bottom: 2px solid transparent
+              &:hover
+                border-bottom: 2px solid $black
+            &:last-child
+              a
+                background: $white
+                border-radius: 30px
+                padding: 9px 20px
+                transition: 0.5s
+                border-bottom: none
+
+  .topContainer
+    width: 90%
+    margin-right: auto
+    margin-left: auto
+    margin-top: 40px
+    max-width: 1400px
+    .h1
+      margin-bottom: 25px
+    .subtitle
+      line-height: 1.5em
+
+    .whitePaperWrap
+      img
+        height: 450px
+        margin: auto
+        margin-top: -50px
+    .whitePaperWrapMobile
+      display: none
+
+
+    .formWrap
+      margin-top: 40px
+      form
+        font-size: 16px
+        display: flex
+        .inputText
+          height: 50px
+          width: 350px
+          display: flex
+          padding-left: 20px
+          align-items: center
+          padding-right: 55px
+          border: none
+          border-radius: 30px
+          color: #b8b9be
+
+          font-family: $muliSemiBold
+          background: #f2f2f2
+
+          &::-webkit-input-placeholder
+            text-indent: 0px
+            transition: text-indent 1s ease
+
+            color: #b8b9be
+          &:focus::-webkit-input-placeholder
+            text-indent: 1000px
+            transition: text-indent 1s ease
+      .mainBtn
+        height: 50px
+        width: 350px
+        margin-left: -50px
+
+
+  .companiesWrap
+    margin-top: 40px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    .companiesInner
+      width: 64%
+      display: flex
+      justify-content: space-around
+      align-items: center
+    img
+      width: 100px
+    .featuredOn
+      width: 10%
+      font-size: 11px
+      .desc
+        position: relative
+
+        font-family: $futuraBold
+        &:after
+          position: absolute
+          content: ""
+          width: 25px
+          height: 1px
+          background-color: #d5d5d8
+          margin-top: 9px
+          margin-left: 22px
+          display: none
+
+    .totalFundingWrap
+      width: 315px
+
+      .totalFunding
+        display: flex
+        align-items: center
+        justify-content: space-between
+        background: $white
+        padding: 10px 20px
+        border-radius: 30px
+        color: $white
+        text-transform: uppercase
+        background: -moz-linear-gradient(268deg, rgba(255, 255, 255, 1) 0%, rgba(244, 251, 240, 1) 100%)
+        background: -webkit-linear-gradient(268deg, rgba(255, 255, 255, 1) 0%, rgba(244, 251, 240, 1) 100%)
+        background: -o-linear-gradient(268deg, rgba(255, 255, 255, 1) 0%, rgba(244, 251, 240, 1) 100%)
+        background: -ms-linear-gradient(268deg, rgba(255, 255, 255, 1) 0%, rgba(244, 251, 240, 1) 100%)
+        border: 2px solid $white
+        box-shadow: 0 10px 10px -6px rgba(0, 0, 0, 0.25)
+      .amount
+        font-family: $oswaldLight
+        font-size: 20px
+        line-height: 1em
+        color: $accent
+      .total
+        font-family: $futuraBold
+        color: $black
+        font-size: 11px
+        line-height: 1em
+        margin-top: 3px
+        position: relative
+
+        &:after
+          position: absolute
+          content: ""
+          width: 35px
+          height: 1px
+          background-color: #d5d5d8
+          margin-top: -6px
+          margin-left: 88px
+    .desc
+      text-transform: uppercase
+      margin-bottom: 0
+
+.videoFluid
+  padding-top: 40px
+  background: url('../img/video/coins.svg') no-repeat center top 75px
+  background-size: contain
+  padding-bottom: 75px
+  .videoContainer
+    .videoWrap
+      text-align: center
+      font-size: 25px
+      .videoLary
+        position: relative
+        z-index: 10
+
+.newsFluid
+  padding-bottom: 100px
+  .newsContainer
+    .h2
+      color: $white
+      span
+        display: block
+    .supports
+      background: url(../img/fb/news/supports.jpg) no-repeat center center
+    .blockChain
+      background: url(../img/fb/news/blockChain.jpg) no-repeat center center
+    .first
+      background: url(../img/fb/news/first.jpg) no-repeat center center
+    .itemNews
+      height: 350px
+      display: flex
+      align-items: flex-end
+      padding: 40px
+      border-radius: 50px
+      margin-bottom: 50px
+      background-size: cover
+      &:hover
+        cursor: pointer
+
+.footerFluid
+  padding-top: 220px
+  margin-top: -15px
+  //background: url(../img/footer/Gearfooterswooping.svg) no-repeat
+  -webkit-background-size: cover
+  background-size: cover
+  //background-color: #f5f5f5
+  position: relative
+
+  .footerContainer
+    .footerHeadline
+      text-transform: uppercase
+      font-family: $muliBold
+      text-align: left
+      font-size: 16px
+      color: $white
+    .fab
+      color: $white
+    .fa-telegram
+      color: $accent
+
+    .logoWrap
+      img
+        margin: 0 auto
+        width: 170px
+        height: auto
+
+    .linksList
+      padding-left: 0
+
+      li
+        display: block
+        list-style: none
+        margin: 5px 10px
+        margin-left: 0
+
+        a
+          color: $white
+          font-family: $default-font
+          font-size: 14px
+
+    .findWrap
+      padding-left: 30px
+      padding-right: 70px
+      li
+        padding-left: 28px
+        margin-top: 10px
+        &:before
+          font-family: "Font Awesome 5 Free"
+          color: $white
+          position: absolute
+          left: 44px
+          font-size: 20px
+          margin-right: 10px
+
+      .address
+        &:before
+          content: "\f3c5"
+      .mail
+        &:before
+          content: "\f0e0"
+      .phone
+        &:before
+          content: "\f095"
+
+    .socialLinks
+      padding-left: 0
+      display: flex
+      align-items: center
+      justify-content: space-between
+      font-size: 24px
+      a
+        color: rgb(118, 197, 55)
+
+    .footerForm
+      display: flex
+      align-items: center
+      justify-content: center
+      .footerEmal
+        width: 100%
+        border-radius: 30px
+        height: 36px
+        padding-left: 30px
+        border: none
+        font-family: $muliSemiBold
+        &::-webkit-input-placeholder
+          text-indent: 0px
+          transition: text-indent 1s ease
+          color: $darkGrey
+        &:focus::-webkit-input-placeholder
+          text-indent: 1000px
+          transition: text-indent 1s ease
+          color: $darkGrey
+
+      .footerSubmit
+        border-radius: 50%
+        color: rgb(58, 178, 54)
+        margin-left: -34px
+        padding: 0
+        background: none
+        border: none
+        font-size: 30px
+        line-height: 28px
+        &:hover
+          cursor: pointer
+        &:focus, &:active
+          outline: none
+    .copy
+      padding-top: 20px
+      padding-bottom: 20px
+      border-top: 1px solid $white
+      text-align: center
+      font-size: 14px
+      margin-bottom: 0
+      color: $white
+
+// footer animated start
+.landscapeWrap
+  display: none
+  position: absolute
+  bottom: 0
+  left: 0
+  width: 100%
+  height: 100%
+  display: block
+  z-index: -1
+  left: 0
+
+$time: 7s
+$landscape: #80C14A
+// $level1: darken($landscape, 5%);
+// $level2: darken($landscape, 10%);
+// $level3: darken($landscape, 20%);
+// $level4: darken($landscape, 30%);
+// $level5: darken($landscape, 30%);
+
+$level1: #80C14A
+$level2: #6CBC4C
+$level3: #43B34F
+$level4: #30AC4F
+$level5: transparent
+
+.landscape
+  position: relative
+  height: calc(100vh - 50px)
+  max-height: 500px
+  background: $landscape
+  background: transparent
+  overflow: hidden
+
+.landscape
+  div
+    position: absolute
+  .sun
+    left: 50%
+    bottom: 345px
+    width: 150px
+    height: 150px
+    margin-left: 200px
+    border-radius: 50%
+    background: #ff8
+
+  .levelFooter
+    left: 50%
+    width: 2000px
+    height: 2000px
+    border-radius: 50%
+
+  .l1
+    bottom: -1600px
+    margin-left: -1100px
+    background: $level1
+
+  .l2
+    bottom: -1531px
+    margin-left: -300px
+    background: $level2
+
+  .l3
+    bottom: -1800px
+    margin-left: -800px
+    background: $level3
+
+  .l4
+    bottom: -1558px
+    margin-left: -1700px
+    background: $level4
+
+  .windmill
+    width: 2px
+    .turbine
+      top: -5px
+      left: -4px
+      width: 10px
+      height: 10px
+      border-radius: 50%
+      animation: $time rotate infinite linear
+
+    .t
+      left: 2px
+      width: 0
+      height: 0
+      border-style: solid
+      border-color: transparent
+      transform-origin: bottom
+
+    &.s1
+      width: 2px
+      height: 15px
+      .t
+        top: -2px
+        left: 4px
+        width: 2px
+        height: 7px
+        border-width: 0
+
+    &.s2
+      height: 20px
+      .t
+        top: -10px
+        border-bottom-width: 12px
+
+    &.s3
+      height: 35px
+      .t
+        top: -18px
+        border-bottom-width: 20px
+
+    &.s4
+      height: 50px
+      .t
+        top: -28px
+        border-bottom-width: 30px
+
+  .l1 .s1
+    background: $level1
+
+  .l1 .s1 .t
+    background: $level1
+
+  .l2 .s2
+    background: $level2
+
+  .l2 .s2 .t
+    border-bottom-color: $level2
+
+  .l3 .s3
+    background: $level3
+
+  .l3 .s3 .t
+    border-bottom-color: $level3
+
+  .l4 .s4
+    background: $level4
+
+  .l4 .s4 .t
+    border-bottom-color: $level4
+
+  .s1:nth-child(1)
+    top: -5px
+    left: 870px
+  .s1:nth-child(2)
+    top: -12px
+    left: 970px
+  .s1:nth-child(3)
+    top: -9px
+    left: 1070px
+  .s2:nth-child(1)
+    top: 125px
+    left: 485px
+  .s2:nth-child(2)
+    top: 85px
+    left: 555px
+  .s2:nth-child(3)
+    top: 50px
+    left: 635px
+  .s3:nth-child(1)
+    top: -10px
+    left: 780px
+  .s3:nth-child(2)
+    top: -30px
+    left: 940px
+  .s3:nth-child(3)
+    top: -25px
+    left: 1120px
+  .s4:nth-child(1)
+    top: -25px
+    left: 1200px
+  .s4:nth-child(2)
+    top: 28px
+    left: 1380px
+  .s4:nth-child(3)
+    top: 125px
+    left: 1560px
+
+  .t1
+    transform: rotate(0deg)
+  .t2
+    transform: rotate(120deg)
+  .t3
+    transform: rotate(240deg)
+
+@keyframes rotate
+  100%
+    transform: rotate(360deg)
+// footer animated end
+
+
+
+// Pop up start
+/* The Modal (background) */
+.modalWrap
+  display: none
+  position: fixed
+  z-index: 999
+  padding-top: 100px
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  overflow: auto
+  background-color: rgb(0, 0, 0)
+  background-color: rgba(0, 0, 0, 0.4)
+
+  .modalContent
+    position: relative
+    background: $white
+    border-radius: 50%
+    background-size: contain
+    margin: auto
+    padding: 0
+    width: 472px
+    box-shadow: 0 0 24px 11px rgba(110, 185, 95, 0.2)
+    -webkit-animation-name: animatetop
+    -webkit-animation-duration: 0.4s
+    animation-name: animatetop
+    animation-duration: 0.4s
+  .closeModal
+    color: white
+    font-size: 28px
+    font-weight: bold
+    position: absolute
+    right: 0
+    top: 0
+    width: 40px
+    height: 40px
+    border-radius: 50%
+    font-family: $futuraBold
+    display: flex
+    align-items: center
+    justify-content: center
+
+    &:before, &:after
+      $width: 50px
+      $height: 10px
+      transform: rotate(-45deg)
+      content: ''
+      position: absolute
+      top: 50%
+      left: 50%
+      margin-top: -$height/2
+      margin-left: -$width/2
+      display: block
+      height: $height
+      width: $width
+      background-color: #fff
+      transition: all 0.2s ease-out
+      border-radius: 40px
+    &:after
+      transform: rotate(45deg)
+
+  .closeModal:hover,
+  .closeModal:focus
+    color: #000
+    text-decoration: none
+    cursor: pointer
+
+  .modalBody
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    background-color: $white
+    background: url(../img/popUp/popUpIndex.svg) no-repeat top center
+    height: 473px
+    text-align: center
+    border-radius: 50%
+
+  .h2
+    font-size: 25px
+  .leave
+    font-size: 30px
+    margin-top: 15px
+    margin-bottom: 15px
+  form
+    font-size: 16px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    .inputText
+      height: 50px
+      width: 350px
+      display: flex
+      padding-left: 20px
+      align-items: center
+      padding-right: 55px
+      border: none
+      border-radius: 30px
+      color: #b8b9be
+      font-family: $muliSemiBold
+      background: #f2f2f2
+      margin-bottom: 20px
+      &::-webkit-input-placeholder
+        text-indent: 0px
+        transition: text-indent 1s ease
+        color: #b8b9be
+      &:focus::-webkit-input-placeholder
+        text-indent: 1000px
+        transition: text-indent 1s ease
+    .mainBtn
+      height: 50px
+      width: 350px
+      font-family: $futuraBold
+
+@-webkit-keyframes animatetop
+  from
+    top: -300px
+    opacity: 0
+  to
+    top: 0
+    opacity: 1
+
+@keyframes animatetop
+  from
+    top: -300px
+    opacity: 0
+  to
+    top: 0
+    opacity: 1
+
+// Pop up end
+
+@import "media"
+// Always at the end

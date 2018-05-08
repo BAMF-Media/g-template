@@ -1,0 +1,2392 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+  color: #dce2e8
+  font-family: $muliSemiBold
+
+::selection
+  background-color: $accent
+  color: #fff
+
+html, body
+  height: 100%
+
+body
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: 1.65
+  font-family: $default-font
+  overflow-x: hidden
+  color: $black
+  input, textarea
+    border: #666 1px solid
+    outline: none
+    &:focus:required:invalid
+      border-color: red
+    &:required:valid
+      border-color: green
+
+.loader
+  position: fixed
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  z-index: 9999
+  background: #ffffff
+  display: flex
+  align-content: center
+  justify-content: center
+  flex-direction: column
+  svg
+    margin-top: -50px
+    height: 400px !important
+    width: auto
+
+.loaderTExt
+  color: #343741
+  font-size: 40px
+  text-align: center
+  font-family: $muliBold
+
+.img-responsive
+  display: block
+  max-width: 100%
+  height: auto
+
+.text-center
+  text-align: center
+
+ul
+  li
+    list-style: none
+
+a:hover
+  text-decoration: none
+
+.h2
+  font-family: $futuraBold
+  font-size: 42px
+  line-height: 1.3em
+  text-transform: uppercase
+
+.h3
+  font-family: $muliSemiBold
+  text-transform: uppercase
+  font-size: 37px
+  text-align: center
+  span
+    font-family: $muliRegular
+    font-weight: 100
+  &.hr
+    border-bottom: 1px solid $darkGrey
+    position: relative
+    &:after
+      content: ''
+      width: 215px
+      height: 4px
+      background: $accent
+      position: absolute
+      bottom: -2px
+      left: 0
+      border-radius: 2px
+
+.h4
+  font-size: 41px
+  font-family: $muliLight
+
+.h5
+  text-align: center
+  font-size: 34px
+
+.subtitle
+  color: $lightGrey
+  font-size: 25px
+
+.smallTitle
+  font-family: $avenirBlack
+  text-transform: uppercase
+  font-size: 15px
+
+.boldT
+  font-family: $muliBold
+
+.semiB
+  font-family: $muliSemiBold
+
+.lightT
+  font-family: $muliLight
+
+// top form validation start
+.errorMessage
+  display: none
+  color: red
+
+.hiddenBlock
+  display: none
+
+.notValidEmailHeader
+  text-align: center
+  color: rgb(247, 29, 29)
+  margin-top: 20px
+  font-family: $muliBold
+  font-size: 15px
+  text-transform: uppercase
+
+// top form validation end
+
+.hamburger
+  display: none
+  &:active, &:focus
+    outline: none
+
+.shadowBtnGrey
+  box-shadow: 0 0 24px 5px rgba(203, 204, 208, .47)
+
+.gradientBtnGreen
+  background: #4daf3f
+  background: -moz-linear-gradient(left, #4daf3f 0%, #6ac657 47%, #89d573 100%)
+  background: -webkit-linear-gradient(left, #4daf3f 0%, #6ac657 47%, #89d573 100%)
+  background: linear-gradient(to right, #4daf3f 0%, #6ac657 47%, #89d573 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4daf3f', endColorstr='#89d573', GradientType=1)
+
+.hvr-grow-shadowGrey
+  transition: 0.5s
+  display: inline-block
+  box-shadow: 0 10px 10px -6px rgba(0, 0, 0, 0.25)
+
+.hvr-grow-shadowGrey:hover, .hvr-grow-shadowGrey:focus, .hvr-grow-shadowGrey:active
+  box-shadow: 0 10px 10px -6px rgba(0, 0, 0, 0.25)
+  transform: scale(1.05)
+
+.hvr-grow-shadowGreen
+  transition: 0.5s
+  display: inline-block
+  box-shadow: 0 6px 25px 15px rgba(103, 195, 84, 0.28)
+
+.hvr-grow-shadowGreen:hover, .hvr-grow-shadowGreen:focus, .hvr-grow-shadowGreen:active
+  box-shadow: 0 6px 25px 15px rgba(103, 195, 84, 0.28)
+  transform: scale(1.1)
+  transition: 0.5s
+
+// new shadow
+.greyShadow
+  box-shadow: 0 0 24px 11px rgba(110, 185, 95, 0.44) !important
+
+.greyShadowHover
+  transition: 0.3s
+  &:hover
+    cursor: pointer
+    box-shadow: 0px 0px 24px 11px rgba($accent, 0.6) !important
+
+.mainBtn
+  background: $accent
+  font-family: $futuraBold
+  border: none
+  border-radius: 30px
+  text-transform: uppercase
+  color: $white
+  display: flex
+  align-items: center
+  justify-content: center
+  padding-top: 0
+  padding-bottom: 0
+  height: 50px
+  position: relative
+  span
+    position: absolute
+    top: 12px
+    right: 0
+    left: 0
+    text-align: center
+
+  &:hover
+    color: $white
+    outline: none
+  &:focus, &:active
+    outline: none
+
+.headerWrap
+  //background: url(../img/header/leaf2.svg) no-repeat top right
+  //background-size: contain
+  //padding-bottom: 40px
+  background-size: 50%
+  min-height: 700px
+  background-position: 100% 97px
+  position: relative
+  z-index: 1
+
+  &:after
+    content: ''
+    width: 100%
+    height: 105%
+    position: absolute
+    background: url(../img/header/leaf2.svg) no-repeat top right
+    -webkit-background-size: 44% 44%
+    background-size: 687px
+    background-position: 100% 40%
+    top: 85px
+    display: block
+    z-index: -1
+  .headerInner
+    width: 90%
+    margin: 0 auto
+    height: 124px
+    display: flex
+    align-content: center
+    justify-content: space-between
+    .leftHeader
+      align-self: center
+      .logo
+        img
+          width: 200px
+          height: auto
+        .logoWhite
+          display: none
+
+    .rightHeader
+      align-self: center
+      nav
+        ul
+          display: flex
+          align-items: center
+          margin-bottom: 0
+          li
+            margin-right: 20px
+            a
+              color: $black
+              font-size: 15px
+              text-transform: uppercase
+              font-family: $muliRegular
+              display: block
+              transition: 0.5s
+              border-bottom: 2px solid transparent
+              &:hover
+                border-bottom: 2px solid $black
+  //&:last-child
+  //  a
+  //    background: $white
+  //    border-radius: 30px
+  //    padding: 9px 20px
+  //    transition: 0.5s
+  //    border-bottom: none
+
+  .topContainer
+    width: 90%
+    margin-right: auto
+    margin-left: auto
+    margin-top: 40px
+    max-width: 1400px
+    .h1
+      margin-bottom: 25px
+    .subtitle
+      line-height: 1.5em
+
+    .whitePaperWrap
+      img
+        height: 450px
+        margin: auto
+        margin-top: -50px
+    .whitePaperWrapMobile
+      display: none
+
+    .formWrap
+      margin-top: 40px
+      form
+        &.valid
+          .inputText
+            border: 1px solid rgba(110, 185, 95, .44)
+            transition: 0.3s
+
+        &.notValid
+          .errorMessage
+            width: 100%
+            margin-top: 10px
+          .inputText
+            border: 1px solid rgba(255, 0, 0, 0.10196078431372549)
+            transition: 0.3s
+          .errorMessage
+            display: block
+
+      form
+        font-size: 16px
+        display: flex
+        flex-wrap: wrap
+
+        .inputText
+          height: 50px
+          width: 320px
+          display: flex
+          padding-left: 20px
+          align-items: center
+          padding-right: 55px
+          border: none
+          border-radius: 30px
+          color: $black
+          font-family: $muliSemiBold
+          background: #f2f2f2
+          border: 1px solid transparent
+          &::-webkit-input-placeholder
+            text-indent: 0px
+            font-family: $muliSemiBold
+
+            transition: text-indent 1s ease
+
+            color: #b8b9be
+          &:focus::-webkit-input-placeholder
+            text-indent: 1000px
+            transition: text-indent 1s ease
+
+      .mainBtn
+        height: 50px
+        width: 320px
+        margin-left: -50px
+        font-family: $futuraBold
+
+  .companiesWrap
+    margin-top: 40px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    .companiesInner
+      width: 100%
+      display: flex
+      justify-content: space-around
+      align-items: center
+    img
+      width: 100px
+    .featuredOn
+      width: 12%
+      font-size: 11px
+      .desc
+        position: relative
+        font-size: 15px
+
+        font-family: $futuraBold
+        &:after
+          position: absolute
+          content: ""
+          width: 25px
+          height: 1px
+          background-color: #d5d5d8
+          margin-top: 9px
+          margin-left: 22px
+          display: none
+
+    .totalFundingWrap
+      width: 315px
+
+      .totalFunding
+        display: flex
+        align-items: center
+        justify-content: space-between
+        background: $white
+        padding: 10px 20px
+        border-radius: 30px
+        color: $white
+        text-transform: uppercase
+        background: -moz-linear-gradient(268deg, rgba(255, 255, 255, 1) 0%, rgba(244, 251, 240, 1) 100%)
+        background: -webkit-linear-gradient(268deg, rgba(255, 255, 255, 1) 0%, rgba(244, 251, 240, 1) 100%)
+        background: -o-linear-gradient(268deg, rgba(255, 255, 255, 1) 0%, rgba(244, 251, 240, 1) 100%)
+        background: -ms-linear-gradient(268deg, rgba(255, 255, 255, 1) 0%, rgba(244, 251, 240, 1) 100%)
+        border: 2px solid $white
+        box-shadow: 0 10px 10px -6px rgba(0, 0, 0, 0.25)
+      .amount
+        font-family: $oswaldLight
+        font-size: 20px
+        line-height: 1em
+        color: $accent
+      .total
+        font-family: $futuraBold
+        color: $black
+        font-size: 11px
+        line-height: 1em
+        margin-top: 3px
+        position: relative
+
+        &:after
+          position: absolute
+          content: ""
+          width: 35px
+          height: 1px
+          background-color: #d5d5d8
+          margin-top: -6px
+          margin-left: 88px
+    .desc
+      text-transform: uppercase
+      margin-bottom: 0
+
+.discountFluid
+  display: none
+  background: $lightBlue
+  padding-top: 40px
+  padding-bottom: 180px
+  .discountContainer
+    text-align: center
+    .h2
+      margin-bottom: 40px
+      span
+        display: block
+    .clockWrap
+      position: relative
+
+      .salesEnd
+        position: absolute
+        top: -17px
+        right: 0
+        left: 0
+        z-index: 2
+        span
+          background: #f7faff
+          font-size: 20px
+          padding: 20px
+          color: #3c3c3c
+
+    .flip-clock-wrapper
+      ul
+        li
+          a
+            div
+              div.inn
+                background: #fefefe
+                color: #3c3c3c
+    .flip-clock-dot
+      background: #3c3c3c
+      box-shadow: 0 0 2px rgba(0, 0, 0, .5)
+    .flip-clock-wrapper
+      ul
+        li
+          a
+            div.up
+              &:after
+                background-color: rgba(142, 142, 140, 0.43)
+            div
+              div.inn
+                text-shadow: 0 1px 1px #000
+    .flip-clock-divider
+      .flip-clock-label
+        font-size: 24px
+        color: #6d6d6d
+        right: -110px
+        top: 4.5em
+        font-family: $muliSemiBold
+
+    .subtitle
+      text-align: center
+
+      margin-bottom: 60px
+    .clock
+      justify-content: center
+      border: 1px solid #d0d3d8
+      border-radius: 30px
+      padding: 37px 60px 66px 60px
+      width: auto
+      display: inline-block
+      margin: 0 auto
+      text-align: center
+      box-shadow: 0 0 2px rgba(0, 0, 0, .5)
+
+    .progressWrap
+      margin-top: 120px
+      margin-bottom: 120px
+    .progress
+      height: 30px
+      border-radius: 20px
+      border: 2px solid white
+      overflow: visible
+      position: relative
+      box-shadow: 0 25px 50px 0 rgba(61, 61, 61, 0.29)
+
+      .greenLine
+        background-color: $accent
+        position: relative
+        border-radius: 20px
+        margin-top: -3px
+        margin-left: -2px
+        height: 32px
+
+      .circle
+        width: 40px
+        height: 40px
+        background-color: $white
+        background: linear-gradient(155deg, #7ad652, #7bec4a)
+        box-shadow: 1px 1px 20px 0 #7be84b
+        position: absolute
+        right: -4px
+        border-radius: 50%
+        z-index: 10
+      .smallCircle
+        background: $white
+        width: 22px
+        height: 22px
+        border-radius: 50%
+        position: absolute
+        top: 9px
+        right: 0
+        left: 9px
+        bottom: 0
+
+      .whiteLine
+        background-color: $white
+        color: $accent
+        border-bottom-right-radius: 20px
+        border-top-right-radius: 20px
+        -webkit-box-shadow: inset 0px 0px 22px -4px rgba(222, 216, 216, 0.75)
+        -moz-box-shadow: inset 0px 0px 22px -4px rgba(222, 216, 216, 0.75)
+        box-shadow: inset 0px 0px 22px -4px rgba(222, 216, 216, 0.75)
+        text-align: left
+        padding-left: 50px
+        font-size: 20px
+        font-family: $muliBold
+
+      .breakP
+        position: absolute
+        width: 80px
+        line-height: 1.5em
+        font-family: $muliBold
+        color: $darkGrey
+
+      .breakPUp
+        top: -74px
+
+        &.firstT
+          left: 5%
+
+        &.secondT
+          left: 25%
+
+        &.thirdT
+          left: 85%
+
+      .breakPD
+        bottom: -85px
+
+        .stick
+          height: 45px
+          width: 3px
+          background-color: $darkGrey
+          position: relative
+          margin: auto
+
+          &:before
+            content: ''
+            width: 20px
+            height: 20px
+            border: 3px solid $darkGrey
+            border-radius: 50%
+            background-color: $white
+            position: absolute
+            top: -9px
+            left: -9px
+
+          &:after
+            content: ''
+            width: 7px
+            height: 7px
+            border-radius: 50%
+            background-color: $accent
+            position: absolute
+            top: -2.5px
+            left: -2.5px
+
+        &.firstR
+          left: 5%
+
+        &.secondR
+          left: 25%
+
+    .moneyWrap
+      width: 90%
+      margin: 35px auto 0 auto
+      text-align: left
+      padding: 20px 20px 30px 20px
+      background: $white
+      border-radius: 15px
+      text-align: center
+      box-shadow: 0 0 24px 5px rgba(203, 204, 208, .47)
+      .col
+        &:nth-child(even)
+          border-right: 1px solid #dedede
+          border-left: 1px solid #dedede
+      .moneyWrapInner
+        padding: 0 20px
+      p
+        margin-bottom: 0
+      .amount
+        color: $accent
+        text-transform: uppercase
+        font-size: 35px
+        span
+          font-size: 16px
+
+      .title
+    //color: $lightGrey
+    .method
+      margin-top: 40px
+      .title
+        text-align: center
+        font-size: 20px
+
+      img
+        height: 20px
+        width: auto
+        margin-right: 7px
+      ul
+        display: flex
+        padding: 0
+        justify-content: center
+        li
+          display: flex
+          align-items: center
+          margin-right: 20px
+          span
+            text-transform: uppercase
+            color: #b5b5b5
+      .accentBtnWrap
+        text-align: center
+        margin-top: 20px
+        .mainBtn
+          width: 300px
+          margin: 0 auto
+
+//.highcharts-plot-background
+//  fill: red
+//
+//.highcharts-color-0
+//  fill: yellow
+//  stroke: yellow
+//
+//.highcharts-graph
+//  filter: url(#glow)
+//
+//.highcharts-tooltip
+//  filter: url(#glow) !important
+
+.div#highcharts-n28jhxx-0
+  border-radius: 30px
+
+.energyFluid
+  padding-top: 40px
+  padding-bottom: 40px
+  background: url(../img/energy/energyBg.svg) no-repeat center center
+  background-size: cover
+  //min-height: 1200px
+  .energyContainer
+    .grphwrap
+      background: $white
+      border-radius: 43px
+      padding: 39px 0px
+      box-shadow: 0 0 24px 5px rgba(203, 204, 208, .47)
+
+    text-align: center
+    .h3
+      color: $accent
+    .desc
+      max-width: 900px
+      margin: 10px auto 50px auto
+
+    .smallTitle
+      margin-bottom: 0
+  img
+    height: 500px
+    margin: 0 auto
+
+.solutionsFluid
+  //background: rgb(250, 250, 249)
+  padding-top: 30px
+  .solutionsContainer
+    .innerItems
+      background: $white
+      border-radius: 10px
+      height: 100%
+      position: relative
+      padding-bottom: 40px
+      img
+        border-top-right-radius: 10px
+        border-top-left-radius: 10px
+      p
+        font-family: $futuraBold
+        font-size: 20px
+        text-align: center
+        text-transform: uppercase
+
+    .title
+      padding: 0
+      text-align: center
+      margin-bottom: 35px
+      margin-top: 10px
+    .h2
+      line-height: 1.3em
+      text-align: center
+
+    p
+      padding: 10px
+    .readWrap
+      position: absolute
+      bottom: 20px
+      text-align: center
+      right: 0
+      left: 0
+
+    .learn
+      font-family: $avenirBlack
+      color: $darkGrey
+      font-size: 18px
+      text-align: center
+      text-transform: uppercase
+      display: block
+      margin: 0 auto
+      transition: 1s
+      &:hover
+        cursor: pointer
+      &:after
+        content: "\f054"
+        font-family: "Font Awesome 5 Free"
+        color: $accent
+        margin-left: 4px
+
+//$solution: 4
+//$currentMargin: 0px
+//
+//@while $solution > 0
+//  .solution-#{$solution}
+//    margin-top: $currentMargin
+//    $currentMargin: $currentMargin - 20
+//  $solution: $solution - 1
+
+.roadMapFluid
+  padding-top: 40px
+  padding-bottom: 10px
+  background: url('../img/roadMap/leafGrey.svg') no-repeat
+  background-position: 18px 105px
+  background-size: cover
+  background-color: #F5F5F5
+  // background: linear-gradient(0deg, rgba(126, 194, 66, 1) 0%, rgba(43, 173, 74, 1) 100%)
+  .roadMapContainer
+
+    .h2
+      color: $black
+      text-align: center
+
+    .subtitle
+      color: $black
+      text-align: center
+      font-size: 16px
+      margin-top: 15px
+    .logo
+      display: inline-block
+      background: $white
+      border-radius: 50%
+      position: absolute
+      top: -25px
+      left: -48px
+      z-index: 10
+
+      img
+        width: 50px
+
+    .roadMapWrap
+      position: relative
+      display: flex
+      flex-direction: column
+      justify-content: flex-start
+      // margin-top: 90px
+      margin: 90px 50px 0
+
+    .step
+      display: flex
+      justify-content: space-around
+      align-items: flex-start
+      border-top: 4px solid $accent
+      text-align: center
+      position: relative
+      z-index: 5
+
+      &:after
+        content: ''
+        display: inline-block
+        width: 100%
+        height: 100%
+        position: absolute
+        top: -4px
+        border: 4px solid $accent
+        box-sizing: content-box
+        z-index: -1
+
+      &.step1
+        &:after
+          right: -82px
+          border-right: 4px solid $accent
+          border-top-right-radius: 86px
+          border-bottom-right-radius: 86px
+          border-left: none
+
+      &.step2
+        flex-direction: row-reverse
+        &:after
+          left: -82px
+          border-left: 4px solid $accent
+          border-top-left-radius: 86px
+          border-bottom-left-radius: 86px
+          border-right: none
+
+      &.step3
+        &:after
+          display: none
+
+    .marker
+      width: 20px
+      height: 20px
+      border-radius: 50%
+      background: rgb(73, 181, 71)
+      border: 2px solid $white
+      position: absolute
+      margin: 0 auto
+      top: -37px
+      left: 44%
+
+      &.pulse
+        display: block
+        background: rgb(73, 181, 71)
+        cursor: pointer
+        box-shadow: 0 0 0 rgba(73, 181, 71, 0.4)
+        animation: pulse 2s infinite
+
+        &:hover
+          animation: none
+
+    .date
+      color: $black
+      position: absolute
+      left: 30%
+      top: -65px
+
+    .point
+      width: 160px
+      height: 70px
+      background-color: $accent
+      margin: 25px
+      margin-bottom: 60px
+      position: relative
+      padding: 10px
+      border-radius: 4px
+      display: flex
+      align-items: center
+      justify-content: center
+
+      p
+        margin-bottom: 0
+
+      &:before
+        content: ''
+        display: block
+        width: 0
+        border: 10px solid transparent
+        border-bottom-color: $accent
+        margin: auto
+        position: absolute
+        top: -20px
+        left: 44%
+
+    .name
+      font-family: $muliSemiBold
+      color: $white
+
+@-webkit-keyframes pulse
+  0%
+    -webkit-box-shadow: 0 0 0 0 rgba(73, 181, 71, 0.4)
+
+  70%
+    -webkit-box-shadow: 0 0 0 10px rgba(73, 181, 71, 0)
+
+  100%
+    -webkit-box-shadow: 0 0 0 0 rgba(73, 181, 71, 0)
+
+.videoFluid
+  padding-top: 40px
+  background: url('../img/video/coins.svg') no-repeat center top 75px
+  background-size: contain
+  padding-bottom: 75px
+  .videoContainer
+    .videoWrap
+      text-align: center
+      font-size: 25px
+      .videoLary
+        position: relative
+        z-index: 10
+        iframe
+//border-radius: 20px
+
+
+
+.messageLarryFluid
+  padding-bottom: 20px
+  margin-top: -70px
+  .messageLarryContainer
+    .messageWrap
+      margin-top: 80px
+      img
+        height: 500px
+        margin: auto
+      .messageInner
+        footer
+          color: $accent
+          font-size: 20px
+          text-align: right
+          font-family: $muliLight
+        .smallTitle
+          color: $accent
+          margin-bottom: 0
+
+.planFluid
+  display: none
+  .planContainer
+    .planList
+      display: flex
+      justify-content: space-around
+      align-items: center
+      padding: 0
+
+      li
+        text-align: center
+        width: 270px
+        border-radius: 20px
+        padding-bottom: 20px
+      .active
+        width: 350px
+
+    .logo
+      display: inline-block
+      background-color: $white
+      border: 4px solid $white
+      border-radius: 50%
+      margin: auto
+      position: relative
+      top: -30px
+
+      img
+        width: 50px
+
+    .stage
+      color: $darkGrey
+      font-family: $futuraBold
+      font-size: 25px
+
+    .planTitle
+      font-family: $futuraBold
+      color: $darkGrey
+      font-size: 22px
+
+      p
+        margin-bottom: 0
+
+    .planSubT
+      font-family: $muliRegular
+      color: $lightGrey
+      font-size: 17px
+      text-transform: uppercase
+
+    .period
+      color: rgb(58, 178, 54)
+      font-family: $muliSemiBold
+
+    .info
+      font-family: $muliSemiBold
+      color: $lightGrey
+      font-size: 14px
+      p
+        margin-bottom: 0
+
+    .active
+      background: linear-gradient(180deg, rgba(126, 194, 66, 1) 0%, rgba(43, 173, 74, 1) 100%)
+      box-shadow: 0px 0px 53px 0px rgba(48, 175, 74, 1)
+      color: $white
+      //-webkit-animation: bounce 1.5s infinite
+      position: relative
+      bottom: 0
+
+      @-webkit-keyframes bounce
+        0%
+          bottom: 8px
+        50%
+          bottom: 16px
+        100%
+          bottom: 8px
+
+      .stage
+        color: $white
+
+      .planTitle
+        font-family: $futuraBold
+        color: $white
+        p
+          margin-bottom: 0
+
+      .planSubT
+        font-family: $muliRegular
+        color: $white
+        font-size: 20px
+        text-transform: uppercase
+
+      .period
+        color: $white
+        font-family: $muliSemiBold
+
+      .info
+        display: none
+
+      .days
+        color: $darkGrey
+        font-family: $muliSemiBold
+
+      .mainBtn
+        height: 50px
+        font-family: $futuraBold
+        background-color: $black
+        margin-top: 20px
+        margin-bottom: 30px
+        border-radius: 30px
+        color: $white
+        box-shadow: 0 0 24px 5px rgba(255, 255, 255, 0.22)
+        text-transform: uppercase
+        width: 280px
+        margin-right: auto
+        margin-left: auto
+
+.aboutGearMessageFluid
+  padding-top: 40px
+  padding-bottom: 45px
+  .aboutGearMessageContainer
+    .h2
+      text-align: left
+      margin-bottom: 15px
+    .commonText
+      text-align: left
+    .mainBtn
+      margin-top: 30px
+      width: 210px
+
+.animtatedSolutionFluid
+  padding-bottom: 10px
+  text-align: center
+  .animtatedSolutionContainer
+    .animateIcon
+      max-width: 170px
+      margin: auto
+    p
+      margin-top: 10px
+      margin-bottom: 50px
+      max-width: 900px
+      margin-left: auto
+      margin-right: auto
+
+.visionFluid
+  padding-top: 60px
+  padding-bottom: 60px
+  // background: url('../img/vision/GearMiningBg.png ') no-repeat center
+  // background-size: cover
+
+  .visionContainer
+    .mainBtn
+      padding: 6px 40px 7px 40px
+
+.ourSolutionsFluid
+  .ourSolutionsContainer
+    text-align: center
+
+    .learnMore
+      font-family: $avenirBlack
+      color: $darkGrey
+      font-size: 18px
+      text-align: center
+      text-transform: uppercase
+      display: block
+      margin: 0 auto
+      transition: 1s
+      &:hover
+        cursor: pointer
+      &:after
+        content: "\f054"
+        font-family: "Font Awesome 5 Free"
+        color: $accent
+        margin-left: 4px
+
+    img
+      //margin: 40px auto 0 auto
+      //height: 140px
+      width: auto
+    p
+      margin-top: 10px
+    span
+      font-family: $muliLight
+
+    .arguments
+      margin-top: 40px
+      border-radius: 50px
+      padding: 12px 40px 50px
+      .h3
+        text-align: left
+    .description
+      text-align: left
+      padding: 20px
+      padding-top: 50px
+
+    .description.subsEn
+      padding-left: 40px
+    .description.greenEn
+
+      padding-right: 20px
+    .description.benefits
+      padding-right: 20px
+    .smallTitle
+      color: $black
+      margin-bottom: 0
+
+      &.hr
+        &:after
+          content: ""
+          display: block
+          width: 40px
+          height: 3px
+          margin-top: 30px
+          border-radius: 1px
+          background: $accent
+    .commonText
+      margin-top: 30px
+      text-align: left
+      color: $lightGrey
+
+    .solutionImg
+    //padding: 0
+
+
+    .items
+      margin-top: 40px
+    .solutionImg.greenEn
+    //background: url("../img/solutions/Solution1.jpg") no-repeat
+    //background-size: cover
+    .solutionImg.subsEn
+    //background: url("../img/solutions/Solution3.png") no-repeat
+    //background-size: cover
+
+    .solutionImg.benefits
+//background: url("../img/solutions/Solution4.jpg") no-repeat
+//background-size: cover
+
+
+
+
+
+.featuresFluid
+  padding-top: 40px
+  padding-bottom: 20px
+  .featuresContainer
+    .featureAnim
+      max-width: 200px
+      margin: 0 auto
+
+    .h2
+      text-align: center
+      margin-top: 20px
+      line-height: 1.4em
+
+    .feature
+      margin-top: 10px
+      padding-right: 20px
+      padding-left: 20px
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      height: 100%
+      .featureInner
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+
+    .featuresText
+      font-size: 18px
+      text-align: center
+      margin-top: 10px
+
+    .featureName
+      font-family: $avenirBlack
+      color: $darkGrey
+      font-size: 24px
+      text-align: center
+      margin-top: 15px
+      margin-bottom: 5px
+      span
+        display: block
+
+    .learnMore
+      font-family: $avenirBlack
+      color: $darkGrey
+      font-size: 18px
+      text-align: center
+      text-transform: uppercase
+      display: block
+      margin: 0 auto
+      transition: 1s
+      &:hover
+        cursor: pointer
+      &:after
+        content: "\f054"
+        font-family: "Font Awesome 5 Free"
+        color: $accent
+        margin-left: 4px
+
+    img
+      height: 100px
+      display: block
+      margin: 0 auto
+
+.calcFluid
+  display: none
+  .calcRow
+    padding-top: 40px
+    background: linear-gradient(90deg, rgba(126, 194, 66, 1) 0%, rgba(43, 173, 74, 1) 100%)
+
+    .calc
+      padding-left: 20px
+
+    .h2
+      color: $white
+      text-align: left
+      padding-right: 70px
+      margin-top: 20px
+      line-height: 50px
+      font-size: 50px
+      margin-bottom: 20px
+
+    .subtitle
+      color: $white
+      font-family: $muliSemiBold
+      margin-bottom: 10px
+
+    .invest
+      color: $white
+      font-size: 24px
+      font-family: $muliSemiBold
+      margin-bottom: 5px
+
+      span
+        font-size: 50px
+        font-family: $futuraBold
+
+    .currentDis
+      background-color: $black
+      font-family: $futuraBold
+      text-transform: uppercase
+      display: flex
+      border-radius: 30px
+      color: $white
+      margin-top: 40px
+      margin-bottom: 65px
+      position: relative
+      height: 50px
+      align-items: center
+      justify-content: center
+      width: 400px
+      p
+        margin: 0
+        position: absolute
+        text-align: center
+        right: 0
+        left: 0
+        top: 12px
+        span
+          color: rgb(72, 178, 84)
+          margin-left: 10px
+
+      button
+        color: $white
+        background: none
+        border: none
+        margin-left: 5px
+        &:hover
+          cursor: pointer
+
+        .hideText
+          color: $white
+          margin-left: 5px
+
+    .rangeslider
+      max-width: 400px
+      height: 10px
+      margin-top: 30px
+      background: rgb(81, 186, 94)
+
+    .rangeslider__handle
+      border-radius: 22px
+      min-width: 42px
+      line-height: 42px
+      text-align: center
+      display: flex
+      justify-content: center
+      align-items: center
+      top: -14px
+      background: $white
+
+      &:before
+        content: '\f104'
+        font-family: "Font Awesome 5 Free"
+        background: none
+        display: inline-block
+        font-size: 24px
+        color: $accent
+        margin: 0 1px
+        padding: 0
+        height: auto
+        width: auto
+        position: static
+        transition: 0.5s
+
+      &:after
+        content: '\f105'
+        font-family: "Font Awesome 5 Free"
+        background: none
+        display: inline-block
+        font-size: 24px
+        color: $accent
+        margin: 0 1px
+        padding: 0
+        height: auto
+        width: auto
+        position: static
+        transition: 0.5s
+
+      &:hover
+        &:before, &:after
+          margin: 0 3px
+
+    .rangeslider__fill
+      background-color: $white
+
+    .graphWrap
+      height: 100%
+    .graphList
+      display: flex
+      justify-content: space-around
+      align-items: flex-end
+      margin-bottom: 0
+
+    .graph
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: flex-end
+      width: 100px
+      height: auto
+      position: relative
+
+      .level
+        width: 100%
+        border-top-left-radius: 50px
+        border-top-right-radius: 50px
+
+      .level1
+        background-color: $darkGrey
+        // box-shadow: inset 0 0 32px 5px rgba(45, 45, 45, 0.37)
+        transition: 0.8s
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        align-items: center
+        p
+          color: $white
+          font-size: 16px
+          text-transform: uppercase
+          margin-bottom: 10px
+          font-family: $futuraBold
+
+      .extra
+        background-color: $white
+        margin-bottom: -50px
+        // box-shadow: inset 0 0 11px 3px rgba(45, 45, 45, .37)
+        transition: 0.8s
+
+    .value
+      font-family: $avenirBlack
+      color: $white
+      font-size: 36px
+      &.only
+        margin-bottom: 20px
+
+    .withoutDis
+      font-family: $muliSemiBold
+      color: $white
+      font-size: 14px
+      text-align: center
+
+    .hiddenDis
+      display: none
+
+  .totalRow
+    padding-top: 40px
+    padding-bottom: 50px
+    .total
+      font-family: $futuraBold
+      font-size: 36px
+      text-transform: uppercase
+      text-align: center
+      margin-bottom: 0
+      color: $black
+
+    .subTotal
+      color: $black
+      font-family: $muliSemiBold
+      text-align: center
+
+    .amount
+      color: $accent
+      font-family: $futuraBold
+      font-size: 70px
+      text-align: center
+      margin-bottom: 0
+
+    .commonText
+      color: $lightGrey
+      margin-top: 10px
+      margin-bottom: 30px
+
+    .mainBtn
+      text-align: center
+      margin: auto
+      width: 245px
+
+    .btnWrap
+      text-align: center
+      width: 100%
+
+    .seeMore
+      color: $black
+      font-family: $muliSemiBold
+      p
+        &:before
+          content: '\f061'
+          font-family: "Font Awesome 5 Free"
+          display: inline-block
+          color: $accent
+          margin-right: 10px
+
+        &:after
+          content: ''
+          display: inline-block
+          width: 70%
+          border-top: 2px dashed $lightGrey
+          height: 1px
+          margin-bottom: 3px
+
+.cummunityFluid
+  display: none
+  padding-top: 40px
+  min-height: 575px
+  background: linear-gradient(180deg, rgba(126, 194, 66, 1) 0%, rgba(43, 173, 74, 1) 100%)
+  position: relative
+  canvas
+    display: block
+    vertical-align: bottom
+  .h2
+    color: $white
+    text-align: center
+
+  #particles-js
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+  .content
+    position: absolute
+    top: 0px
+    left: 0px
+    width: 100%
+    height: 100%
+    padding: 40px 50px
+    overflow: hidden
+    background: url("../img/communityCircles/zig_zag.svg") bottom center no-repeat
+    background-size: 102%
+
+  .subtitle
+    color: $white
+    text-align: center
+    font-size: 16px
+  .communityList
+    display: flex
+    justify-content: space-around
+    padding-left: 4px
+    margin-top: 200px
+  // li
+  //   // position: absolute
+  //   bottom: 13%
+
+  //   &.com1
+  //     left: 9.15%
+
+  //   &.com2
+  //     left: 21.8%
+  //     bottom: 26%
+
+  //   &.com3
+  //     left: 34.7%
+
+  //   &.com4
+  //     left: 47%
+  //     bottom: 26%
+
+
+  //   &.com5
+  //     left: 59.7%
+
+
+  //   &.com6
+  //     left: 72.4%
+  //     bottom: 26%
+
+  //   &.com7
+  //     left: 85.1%
+
+
+
+
+  .person
+    position: relative
+
+    .look
+      cursor: pointer
+      img
+        width: 75px
+        transition: 0.5s
+
+    .aboutPerson
+      position: absolute
+      height: auto
+      width: 250px
+      background-color: $white
+      border-radius: 4px
+      padding: 10px 24px 15px
+      // display: none
+      visibility: hidden
+      opacity: 0
+      bottom: 108px
+      left: -90px
+      transition: 0.8s
+      text-align: center
+
+      &:after
+        content: ''
+        display: block
+        width: 0
+        border: 10px solid transparent
+        border-top-color: $white
+        margin: auto
+        position: absolute
+        bottom: -20px
+        left: 46%
+
+    p
+      margin-bottom: 0
+
+    .name
+      font-family: $muliBold
+      color: $black
+      font-size: 24px
+      text-transform: uppercase
+
+    .position
+      font-family: $muliSemiBold
+
+    &.activePerson
+      .look
+        img
+          transform: scale(1.3)
+
+      .aboutPerson
+        display: block
+        opacity: 1
+        visibility: visible
+
+  .down
+    margin-top: 80px
+    .aboutPerson
+      bottom: 170px
+
+.cummunityMobileFluid
+
+
+  display: none
+  padding-top: 40px
+  background: linear-gradient(180deg, rgba(126, 194, 66, 1) 0%, rgba(43, 173, 74, 1) 100%)
+  position: relative
+
+  .h2
+    color: $white
+    text-align: center
+
+  .communitySlider
+    padding-left: 0
+    li
+      &:focus
+        outline: none
+
+  .subtitle
+    color: $white
+    text-align: center
+    font-size: 16px
+
+  .person
+    margin: 20px
+
+    .look
+      cursor: pointer
+      img
+        width: 100px
+        transition: 0.5s
+        margin: auto
+
+    .aboutPerson
+
+      width: 250px
+      background-color: $white
+      border-radius: 4px
+      padding: 10px 24px 15px
+
+      bottom: 108px
+      left: -90px
+      transition: 0.8s
+      text-align: center
+      text-align: center
+      margin: 10px auto
+
+      &:after
+        content: ''
+        display: block
+        width: 0
+        border: 10px solid transparent
+        border-top-color: $white
+        margin: auto
+        position: absolute
+        bottom: -20px
+        left: 46%
+
+    p
+      margin-bottom: 0
+
+    .name
+      font-family: $muliBold
+      color: $black
+      font-size: 24px
+      text-transform: uppercase
+
+    .position
+      font-family: $muliSemiBold
+
+  .slick-next
+    right: 0px
+    top: 40%
+
+    &:before
+      content: '\f105'
+      font-size: 50px
+      font-family: "Font Awesome 5 Free"
+
+  .slick-prev
+    left: 0px
+    top: 40%
+    &:before
+      content: '\f104'
+      font-size: 50px
+      font-family: "Font Awesome 5 Free"
+
+.highcharts-credits
+  display: none
+
+g.highcharts-button.highcharts-contextbutton
+  display: none
+
+.icoPriceFluid
+  padding-top: 60px
+  padding-bottom: 60px
+  .icoPriceContainer
+    .innerWrap
+      padding-left: 20px
+    .mainBtn
+      margin-top: 30px
+      margin-left: 10px
+      width: 280px
+    .h2
+      padding-left: 10px
+      line-height: 1.3em
+      margin-bottom: 20px
+      text-align: left
+      font-size: 40px
+    p
+      padding-left: 10px
+    .smallDesc
+      position: relative
+
+.teamFluid
+  background: #F5F5F5
+  padding-bottom: 40px
+  padding-top: 40px
+  .teamContainer
+    text-align: center
+
+    .h2
+      display: inline-block
+    .devider
+      width: 100%
+      border-bottom: 2px dotted #999999
+      margin-top: 15px
+      margin-bottom: 30px
+
+    .teammate
+      width: 160px
+      margin: 20px 10px
+      img
+        border-radius: 50%
+        width: 120px
+        margin: auto
+        box-shadow: 0 0 14px 8px rgba(203, 204, 208, 0.5)
+    .imgWrap
+      position: relative
+    .linkedin
+      position: absolute
+      bottom: 0
+      right: 20px
+      background: #6CBC4C
+      width: 35px
+      height: 35px
+      border-radius: 50%
+      font-size: 20px
+
+      i
+        color: $white
+
+    .commonText
+      text-align: center
+      margin-top: 10px
+
+      margin-bottom: 40px
+    .name
+      color: $accent
+      font-family: $avenirBlack
+      font-weight: 200
+      text-align: center
+      margin-top: 10px
+      margin-bottom: 0
+      font-size: 20px
+
+    .position
+      font-weight: 800
+
+      text-align: center
+
+.advisorsFluid
+  background-color: $white
+  padding-top: 40px
+  .advisorsContainer
+    .h2
+      text-align: center
+      margin-bottom: 20px
+    .advisor
+      max-width: 270px
+      margin: 20px auto
+      height: 100%
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      align-items: center
+
+    .advisorKing
+      img
+
+    .advisorStan
+      img
+        padding-bottom: 14px
+
+    .name
+      font-family: $avenirBlack
+      color: $darkGrey
+      font-size: 24px
+      text-align: center
+
+    .about
+      text-align: center
+      margin-bottom: 0
+
+    .advisorsPlaceholder
+      display: block
+      width: 100%
+      height: 100%
+
+.formFluid
+  //background-color: #f5f5f5
+  .formContainer
+    background: url("../img/formUpdates/formBg.svg") no-repeat center
+    background-size: 100%
+    text-align: center
+    padding-top: 100px
+    padding-bottom: 40px
+    position: relative
+    top: -80px
+    .fa-envelope
+      color: #dce2e8
+
+    .h4
+      color: $white
+
+    .commonText
+      color: $white
+      font-size: 14px
+      margin-top: 15px
+    form
+      &.valid
+        .fa-envelope
+          color: $accent
+      &.notValid
+        .updatesEmail
+        .fa-envelope
+          color: red
+        .updatesSubmit
+          background: red
+          &:hover
+            background: #c70404
+    form
+      .updatesWrap
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 50px
+        width: 90%
+        border-radius: 25px
+        background: $white
+        margin: auto
+
+      label
+        padding-left: 20px
+        margin-right: 10px
+        font-size: 22px
+        margin-bottom: 0
+
+      .updatesEmail
+        width: 80%
+        height: 70%
+        border: 2px solid transparent
+        border-left: solid 2px #dce2e8
+        padding: 10px
+        font-family: $muliSemiBold
+        font-style: italic
+        font-size: 18px
+        color: $black
+
+        &::-webkit-input-placeholder
+          text-indent: 0px
+          transition: text-indent 1s ease
+          font-style: italic
+
+        &:focus::-webkit-input-placeholder
+          text-indent: 1000px
+          transition: text-indent 1s ease
+
+      .updatesSubmit
+        height: 84%
+        width: 200px
+        margin-right: 5px
+        border-radius: 25px
+        background-color: $darkGrey
+        border: none
+        color: $white
+        cursor: pointer
+        display: flex
+        align-items: center
+        justify-content: center
+        font-size: 18px
+        transition: 0.5s
+        &:hover
+          background: #2bad4a
+        &:focus, &:active
+          outline: none
+
+        i
+          font-size: 20px
+          padding-right: 10px
+
+.footerFluid
+  padding-top: 227px
+  margin-top: -15px
+  //background: url(../img/footer/Gearfooterswooping.svg) no-repeat
+  -webkit-background-size: cover
+  background-size: cover
+  //background-color: #f5f5f5
+  position: relative
+
+  .footerContainer
+    .footerRow
+      padding-bottom: 25px
+    .footerHeadline
+      text-transform: uppercase
+      font-family: $muliBold
+      text-align: left
+      font-size: 16px
+      color: $white
+    .fab
+      color: $white
+    .fa-telegram
+      color: $accent
+
+    .logoWrap
+      img
+        margin: 0 auto
+        width: 170px
+        height: auto
+
+    .linksList
+      padding-left: 0
+
+      li
+        display: block
+        list-style: none
+        margin: 5px 10px
+        margin-left: 0
+
+        a
+          color: $white
+          font-family: $default-font
+          font-size: 14px
+
+    .findWrap
+      padding-left: 30px
+      padding-right: 70px
+      li
+        padding-left: 28px
+        margin-top: 10px
+        &:before
+          font-family: "Font Awesome 5 Free"
+          color: $white
+          position: absolute
+          left: 44px
+          font-size: 20px
+          margin-right: 10px
+
+      .address
+        &:before
+          content: "\f3c5"
+      .mail
+        &:before
+          content: "\f0e0"
+      .phone
+        &:before
+          content: "\f095"
+
+    .socialLinks
+      padding-left: 0
+      display: flex
+      align-items: center
+      justify-content: space-between
+      font-size: 24px
+      a
+        color: rgb(118, 197, 55)
+
+    .footerForm
+      &.valid
+      &.notValid
+        .fa-telegram
+          color: red
+
+    .footerForm
+      display: flex
+      align-items: center
+      justify-content: center
+      flex-wrap: wrap
+      position: relative
+      .footerEmal
+        width: 100%
+        border-radius: 30px
+        height: 36px
+        padding-left: 30px
+        border: none
+        font-family: $muliSemiBold
+        &::-webkit-input-placeholder
+          text-indent: 0px
+          transition: text-indent 1s ease
+          color: $darkGrey
+        &:focus::-webkit-input-placeholder
+          text-indent: 1000px
+          transition: text-indent 1s ease
+          color: $darkGrey
+
+      .footerSubmit
+        border-radius: 50%
+        color: rgb(58, 178, 54)
+        margin-left: -34px
+        padding: 0
+        background: none
+        border: none
+        font-size: 30px
+        line-height: 28px
+        &:hover
+          cursor: pointer
+        &:focus, &:active
+          outline: none
+
+    .copy
+      padding-top: 20px
+      padding-bottom: 20px
+      border-top: 1px solid $white
+      text-align: center
+      font-size: 14px
+      margin-bottom: 0
+      color: $white
+
+// footer animated start
+.landscapeWrap
+  display: none
+  position: absolute
+  bottom: 0
+  left: 0
+  width: 100%
+  height: 100%
+  display: block
+  z-index: -1
+  left: 0
+
+$time: 7s
+$landscape: #80C14A
+// $level1: darken($landscape, 5%);
+// $level2: darken($landscape, 10%);
+// $level3: darken($landscape, 20%);
+// $level4: darken($landscape, 30%);
+// $level5: darken($landscape, 30%);
+
+$level1: #80C14A
+$level2: #6CBC4C
+$level3: #43B34F
+$level4: #30AC4F
+$level5: transparent
+
+.landscape
+  position: relative
+  height: calc(100vh - 50px)
+  max-height: 500px
+  background: $landscape
+  background: transparent
+  overflow: hidden
+
+.landscape
+  div
+    position: absolute
+  .sun
+    left: 50%
+    bottom: 345px
+    width: 150px
+    height: 150px
+    margin-left: 200px
+    border-radius: 50%
+    background: #ff8
+
+  .levelFooter
+    left: 50%
+    width: 2000px
+    height: 2000px
+    border-radius: 50%
+
+  .l1
+    bottom: -1600px
+    margin-left: -1100px
+    background: $level1
+
+  .l2
+    bottom: -1531px
+    margin-left: -300px
+    background: $level2
+
+  .l3
+    bottom: -1800px
+    margin-left: -800px
+    background: $level3
+
+  .l4
+    bottom: -1558px
+    margin-left: -1700px
+    background: $level4
+
+  .windmill
+    width: 2px
+    .turbine
+      top: -5px
+      left: -4px
+      width: 10px
+      height: 10px
+      border-radius: 50%
+      animation: $time rotate infinite linear
+
+    .t
+      left: 2px
+      width: 0
+      height: 0
+      border-style: solid
+      border-color: transparent
+      transform-origin: bottom
+
+    &.s1
+      width: 2px
+      height: 15px
+      .t
+        top: -2px
+        left: 4px
+        width: 2px
+        height: 7px
+        border-width: 0
+
+    &.s2
+      height: 20px
+      .t
+        top: -10px
+        border-bottom-width: 12px
+
+    &.s3
+      height: 35px
+      .t
+        top: -18px
+        border-bottom-width: 20px
+
+    &.s4
+      height: 50px
+      .t
+        top: -28px
+        border-bottom-width: 30px
+
+  .l1 .s1
+    background: $level1
+
+  .l1 .s1 .t
+    background: $level1
+
+  .l2 .s2
+    background: $level2
+
+  .l2 .s2 .t
+    border-bottom-color: $level2
+
+  .l3 .s3
+    background: $level3
+
+  .l3 .s3 .t
+    border-bottom-color: $level3
+
+  .l4 .s4
+    background: $level4
+
+  .l4 .s4 .t
+    border-bottom-color: $level4
+
+  .s1:nth-child(1)
+    top: -5px
+    left: 870px
+  .s1:nth-child(2)
+    top: -12px
+    left: 970px
+  .s1:nth-child(3)
+    top: -9px
+    left: 1070px
+  .s2:nth-child(1)
+    top: 125px
+    left: 485px
+  .s2:nth-child(2)
+    top: 85px
+    left: 555px
+  .s2:nth-child(3)
+    top: 50px
+    left: 635px
+  .s3:nth-child(1)
+    top: -10px
+    left: 780px
+  .s3:nth-child(2)
+    top: -30px
+    left: 940px
+  .s3:nth-child(3)
+    top: -25px
+    left: 1120px
+  .s4:nth-child(1)
+    top: -25px
+    left: 1200px
+  .s4:nth-child(2)
+    top: 28px
+    left: 1380px
+  .s4:nth-child(3)
+    top: 125px
+    left: 1560px
+
+  .t1
+    transform: rotate(0deg)
+  .t2
+    transform: rotate(120deg)
+  .t3
+    transform: rotate(240deg)
+
+@keyframes rotate
+  100%
+    transform: rotate(360deg)
+// footer animated end
+
+
+
+// Pop up start
+/* The Modal (background) */
+.modalWrap
+  display: none
+  position: fixed
+  z-index: 999
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  overflow: auto
+  background-color: rgb(0, 0, 0)
+  background-color: rgba(0, 0, 0, 0.4)
+
+  .modalContent
+    position: relative
+    background: $white
+    //border-radius: 50%
+    //background-size: contain
+    margin: auto
+    padding: 0
+    box-shadow: 0 0 24px 11px rgba(110, 185, 95, 0.2)
+    -webkit-animation-name: animatetop
+    -webkit-animation-duration: 0.4s
+    animation-name: animatetop
+    animation-duration: 0.4s
+    border-radius: 35px
+    background: $white
+    height: 475px
+    width: 760px
+
+  .errorMessage
+    margin-top: 10px
+
+  .logoBlack
+    width: 200px
+    height: auto
+    margin: 0 auto 40px auto
+  .closeModal
+    position: absolute
+    right: 22px
+    top: 22px
+    width: 40px
+    height: 40px
+    transition: 0.3s
+
+    &:before, &:after
+      $width: 45px
+      $height: 8px
+      transform: rotate(-45deg)
+      content: ''
+      position: absolute
+      top: 50%
+      left: 50%
+      margin-top: -$height/2
+      margin-left: -$width/2
+      display: block
+      height: $height
+      width: $width
+      background-color: #b8b8b7
+      transition: all 0.2s ease-out
+      border-radius: 40px
+
+    &:after
+      transform: rotate(45deg)
+    &:hover
+      &:before, &:after
+        background: $black
+
+  .closeModal:hover,
+  .closeModal:focus
+    color: #000
+    text-decoration: none
+    cursor: pointer
+
+  .modalBody
+    padding: 50px 40px 60px 40px
+    text-align: center
+  .h2
+    font-size: 25px
+  .launchT
+    font-size: 30px
+    margin-bottom: 25px
+  form
+    &.valid
+      .inputTextEmail
+        border: 1px solid rgba(110, 185, 95, .44)
+        transition: 0.3s
+    &.notValid
+      .inputTextEmail
+        border: 1px solid rgba(255, 0, 0, 0.10196078431372549)
+        transition: 0.3s
+      .errorMessage
+        display: block
+        width: 100%
+        margin-top: 10px
+
+  form
+    margin-top: 25px
+    font-size: 16px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    .inputText
+      height: 50px
+      width: 420px
+      display: flex
+      padding-left: 20px
+      align-items: center
+      padding-right: 20px
+      border: none
+      border-radius: 30px
+      color: $black
+      font-family: $muliSemiBold
+
+      background: #f2f2f2
+      margin-bottom: 20px
+
+      &::-webkit-input-placeholder
+        text-indent: 0px
+        transition: text-indent 1s ease
+        color: #b8b9be
+        font-family: $muliSemiBold
+        text-align: center
+
+      &:focus::-webkit-input-placeholder
+        text-indent: 1000px
+        transition: text-indent 1s ease
+    .mainBtn
+      height: 50px
+      width: 420px
+      font-family: $futuraBold
+
+@-webkit-keyframes animatetop
+  from
+    top: -300px
+    opacity: 0
+  to
+    top: 0
+    opacity: 1
+
+@keyframes animatetop
+  from
+    top: -300px
+    opacity: 0
+  to
+    top: 0
+    opacity: 1
+
+// Pop up end
+
+@import "media"
+// Always at the end

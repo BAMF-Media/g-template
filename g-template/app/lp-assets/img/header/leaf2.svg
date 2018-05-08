@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1289 1342" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <g transform="matrix(1,0,0,1,-1263,-174)">
+        <g transform="matrix(1.78799,-0.359945,0.359945,1.78799,-1900.02,757.649)">
+            <path d="M2325.18,734.473C2323.86,736.091 2367.8,848.686 2390.73,910.152C2403.57,944.555 2388.32,953.048 2359.49,982.693C2348.26,930.415 2242.59,714.338 2242.59,714.338C2148.91,712.71 1991.33,693.451 1918.57,582.813C1819.66,436.136 1914.47,231.52 1761.3,54.439C1726.11,13.332 2186.81,75.878 2359.49,291.935C2399.14,341.839 2414.34,403.229 2414.07,468.424C2413.91,507.06 2404.5,585.556 2381.76,636.891C2381.76,636.891 2381.44,637.626 2381.44,637.626L2381.43,637.624L2381.76,636.891C2263.71,320.143 1953.18,212.691 1953.18,212.691C1953.18,212.691 2231.82,445.343 2325.18,734.473ZM2325.69,733.768L2326.13,733.157L2326.17,733.272L2325.88,733.627L2325.18,734.473L2325.69,733.768Z" style="fill:url(#_Linear1);"/>
+        </g>
+    </g>
+    <defs>
+        <linearGradient id="_Linear1" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-119.765,636.901,-636.901,-119.765,2094.63,104.932)"><stop offset="0" style="stop-color:rgb(138,216,110);stop-opacity:1"/><stop offset="1" style="stop-color:rgb(84,191,67);stop-opacity:1"/></linearGradient>
+    </defs>
+</svg>
